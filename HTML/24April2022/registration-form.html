@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h3>Student Registration form</h3>
+	<form action="" method="post" autocomplete="on"> 
+		<fieldset>
+			<legend> Admission Info</legend>
+	<input type="text" name="fullname" placeholder="Enter your full name"> <br>
+	<input type="date" name="dob"> <br>
+	<label for="">Gender: </label><br>
+	Male <input type="radio" name="gender" value="male">
+	Female <input type="radio" name="gender" value="female">
+	Others <input type="radio" name="gender" value="others"> 
+	Subjects: <br>
+	PHP <input type="checkbox" name="php" value="php">
+	JAVA <input type="checkbox" name="java" value="java">
+	MySQL <input type="checkbox" name="mysql" value="mysql"> <br>
+
+	Location: <br>
+	<select name=" Location=">
+		<option value="1"disabled selected> Select One</option>
+		<optgroup label="Mirpur">
+		<option value="2">Mirpur10</option>
+		<option value="3">Mirpur11</option>
+
+		</optgroup>
+		<optgroup label="Dhanmondi">
+
+		<option value="4">Shankar</option>
+		<option value="5">Zigatola</option>
+		<option value="6">Dhanmondi 15</option>
+		</optgroup>
+		<option value="7">Palton</option>
+		<option value="8">Gulshan</option>
+		<!-- <input type="image" src="button.jpg" value="Button"> -->
+	</select>
+	<br>
+	<input type="file" name="photo" >
+	<!-- <input type="hidden" name="attachment"> hidden dile hidden thake... kono data pass korte chai kintu keu dkehbe na.... -->
+	<br>
+	Phone:<input type="text" name="phone">
+
+	</fieldset>
+	<fieldset>
+		<legend>Login Info</legend>
+		<input type="email" name="email" placeholder="Enter valid email address"> <br>
+		<input type="password" name="password" placeholder="Enter password"> <br>
+		<input type="password" name="repeat_password" placeholder="retype password">
+	</fieldset>
+	<input type="submit" name="submit" value="SUBMIT">
+	<!-- <button type="button" name="">Submit</button> -->
+	<input type="reset" name="reset"value="RESET">
+
+	</form>
+</body>
+</html>

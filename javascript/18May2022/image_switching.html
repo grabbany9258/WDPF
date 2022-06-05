@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h2>image switching on mouse hover</h2>
+
+	<script>
+		function func1(){
+			document.sample.src="tiger.jpg";
+		}
+		function func2(){
+			document.sample.src="cat.jpg";
+		}
+
+		function fun3(){
+			var fast = document.myform.firstname.value;
+			document.getElementById('show').innerHTML = fast;
+		}
+
+	</script>
+
+
+
+	<a href=""onmouseover="func1()" onmouseout="func2()"><img src="cat.jpg" name="sample" alt="" width="400"></a><br>
+
+	<form action="" name="myform">
+
+	<input type="text" value=""  name="firstname"><button type="button" onclick="func3()">Click here</button>
+
+	</form>
+
+
+	<h1 id="show"></h1>
+
+
+
+</body>
+</html>

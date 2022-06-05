@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function radioCheck(){
+			
+			// var component = document.hardware.component.value;
+			var display ="Your answer is: \n";
+			// display +=component + "\n";
+			// alert(hd.length);
+			var items=document.getElementsByTagName('input');
+			for(var i =0; i<items.length; i++){
+				if (items[i].checked) {
+					// alert(hd.elements[i].value);
+					display += items[i].value + "\n";
+				}
+			}
+			document.hardware.answer.value = display;
+		}
+	</script>
+
+
+	<form name="hardware">
+		<h2>Pick one of the following as the most important:</h2>
+		Components: <br>
+		<input type="radio" name="component" value="Cost">Cost <br>
+		<input type="radio" name="component" value="reliability">reliability <br>
+		<input type="radio" name="component" value="reputation">Reputation <br>
+		<input type="radio" name="component" value="use">Ease of use <br> <br>
+
+		<h2>Which of the following do you plan to purchase with your computer ? Check all that apply:</h2>
+
+		Hardware Items: <br>
+
+		<input type="checkbox" name="printer" class="item" value="Printer">Printer<br>
+		<input type="checkbox" name="disk" class="item" value="High Capacity Disk">High Capacity Disk <br>
+		<input type="checkbox" name="scanner" class="item" value="scanner">Scanner <br>
+		<input type="checkbox" name="memory" class="item" value="Added Memory"> Added Memory <br><br>
+
+		Your Answer: <br>
+
+		<textarea name="answer" id="" cols="30" rows="10"></textarea>
+		<input type="button" onclick="radioCheck()" value="Sort It Out">
+
+
+	</form>
+</body>
+</html>

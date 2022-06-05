@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function formFields(){
+			var length = document.forms[0].elements.length;
+
+
+			var output="";
+			for(var i=0; i<length-1; i++){
+				output += document.forms[0].elements[i].value + "<br>";
+			}
+			document.getElementById("display").innerHTML=output;
+		}
+	</script>
+
+
+	<form>
+		<input type="text" placeholder="Enter name"><br>
+		<textarea cols="30" rows="10" placeholder="Enter Address"></textarea> <br>
+
+		<select>
+			<option value="">Select One District</option>
+			<option value="Dhaka">Dhaka</option>
+			<option value="Sylhet">Sylhet</option>
+			<option value="Khulna">Khulna</option>
+		</select>
+		<button type="button" onclick="formFields()">Click Here</button>
+	</form>
+	<h1 id="display"></h1>
+</body>
+</html>

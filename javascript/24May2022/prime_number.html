@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.notprime{color:red; font-size: 35px;}
+		.prime{color:green; font-size: 35px;}
+	</style>
+</head>
+<body>
+	<h1>Find Prime Number: Evidence 1</h1>
+	<script>
+		function prime_number(n){
+			if(n==1){
+				return "<div class='notprime'>" + n+ " is not a prime number </div>";
+
+			} else if(n==2){
+				return "<div class='prime'>" + n+ " is a prime number </div>";
+
+			}else{
+				for(var i=2; n>i; i++){
+					if(n%i==0){
+					return "<div class='notprime'>" + n+ " is not a prime number </div>";
+					}
+
+				}
+				return "<div class='prime'>" + n+ " is a prime number </div>";
+			}
+		}
+		document.write(prime_number(prompt("Enter number")));
+		
+	</script>
+</body>
+</html>

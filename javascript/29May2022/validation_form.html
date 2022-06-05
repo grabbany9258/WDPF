@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		function validate(){
+			var name=document.register.name.value;
+			var email=document.register.email.value;
+			var number=document.register.number.value;
+			var gender=document.register.gender.value;
+			var language=document.register.language.value;
+			var f=document.register.number.value;
+
+
+			if(name==""){
+				alert("You have to put a name");
+			}
+			else if(email==""){
+				alert("You have to put an email");
+			}
+			else if(number==""){
+				alert("You have to put a number");
+			}
+			else if(gender==""){
+				alert("You have to put a gender");
+			}
+			else if(language==""){
+				alert("You have to put a language");
+			}
+			else if(gender==""){
+				alert("You have to put a gender");
+			}
+			else if(gender==""){
+				alert("You have to put a gender");
+			}
+			else if(gender==""){
+				alert("You have to put a gender");
+			}
+
+			else{
+				alert("All are submitted")
+			}
+			
+		}
+	</script>
+
+
+	<h2>Registration form</h2>
+	<form name="register">
+		Name: <input type="text" name="name" placeholder="Your name"> <br><br>
+		Email: <input type="email" name="email" placeholder="Your email"> <br><br>
+		Number: <input type="text" name="number" placeholder="Your number"> <br><br>
+		Gender: 
+		Male:<input type="radio" name="gender" value="male">
+		Female:<input type="radio" name="gender" value="female">
+		Others:<input type="radio" name="gender" value="others"><br><br>
+		Language: 
+		<select>
+			<option value=""disabled selected>Select Language</option>
+			<option value="Bangla">Bangla</option>
+			<option value="English">English</option>
+			<option value="Others">Others</option>
+		</select><br><br>
+		About: 
+		<textarea name="" id="" cols="30" rows="10" placeholder="Write about yourself"></textarea> <br><br>
+		<input type="button" onclick="validate()" value="Register">
+	</form>
+	<h1 id="output"></h1>
+
+</body>
+</html>

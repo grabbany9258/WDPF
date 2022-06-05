@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function passfail(){
+			var mcq=document.result.mcq.value;
+			var evd=document.result.evd.value;
+			var des=document.result.des.value;
+
+			var output;
+			if (mcq>=80 && evd>=60 && des>=60) {
+				output= "You have passed"
+			} else{
+				output= "You have Failed"
+			}
+			document.getElementById("N").innerHTML=output
+		}
+	</script>
+
+
+
+	<form name="result">
+		<input type="text" name="mcq" placeholder="MCQ Marks"><br>
+		<input type="text" name="des" placeholder="Descriptive Marks"><br>
+		<input type="text" name="evd" placeholder="Evidence Marks"><br>
+		<input type="button" onclick="passfail()" value="Show Result" ><br>
+	</form>
+
+	<h1 id="N"></h1>
+</body>
+</html>

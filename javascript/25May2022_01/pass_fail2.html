@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function result(){
+			var mcq=document.myform.mcq.value;
+			var evd=document.myform.evd.value;
+			var des=document.myform.des.value;
+
+			if (mcq>=80 && des>=60 && evd>=60) {
+				alert("You have Passed")
+			}
+			else{
+				alert("You have Failed")
+			}
+		}
+	</script>
+	<form name="myform">
+		<input type="text" name="mcq" placeholder="MCQ Marks"><br>
+		<input type="text" name="des" placeholder="Descriptive Marks"><br>
+		<input type="text" name="evd" placeholder="Evidence Marks"><br>
+		<input type="button" onclick="result()" value="show result">
+	</form>
+</body>
+</html>

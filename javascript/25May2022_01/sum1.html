@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function result() {
+			var x=document.myform.num1.value;
+			var y=document.myform.num2.value;
+
+			x=parseInt(x);
+			y=parseInt(y);
+			var total=x+y
+			document.getElementById('addition').innerHTML=total;
+
+		}
+	</script>
+
+
+
+	<form name="myform">
+		<input type="text" name="num1" placeholder="Enter 1st number"><br>
+		<input type="text" name="num2" placeholder="Enter 2nd number"><br>
+		<input type="button" onclick="result()" value="Show sum">
+		
+	</form>
+	<h1 id=addition></h1>
+</body>
+</html>

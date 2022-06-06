@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var sell_price= parseInt(prompt("Enter Selling Amount"));
+
+		var discout=0;
+
+		if (sell_price>=5000) {
+			discount=sell_price*.1;
+		}
+		var final_sell_price=sell_price-discount;
+		document.write("Actual selling Amount After Discount:" + final_sell_price);
+	</script>
+</body>
+</html>

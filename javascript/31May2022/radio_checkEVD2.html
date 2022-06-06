@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		function radioCheck(){
+
+			var product=document.myform.product.value;
+			var pd=document.myform.pd.value;
+			var brand=document.myform.brand.value;
+			var list=document.myform.list.value;
+			// var lists = document.getElementsByClassName("list");
+			// var selectedlists = "<h4>selected lists</h4>";
+
+
+			var display="<h1>Product Information</h1>";
+			display += "Name: " + product + "<br>";
+			display += "pd: " + pd + "<br>";
+			display += "brand: " + brand + "<br>";
+			// display += "list: " + list + "<br>";
+			// display += selectedlists + "<br>";
+
+			var mywin =window.open("", "", "width=400,height=300,top=300,left=400");
+
+			mywin.document.write(display);
+		}
+
+
+
+
+	</script>
+
+	<form name="myform" >
+		Product Name: <br>
+		<input type="text" name="product" placeholder="Enter Product Name"><br>
+		Product Details: <br>
+		<textarea name="Product_Details" id="" cols="30" rows="10">Product Details</textarea> <br>
+		<h4>List of Barands</h4>
+		Brand New:<input type="radio" name="brand" value="Brand New" ><br>
+		Second Hand:<input type="radio" name="brand" value="Second Hand" ><br>
+		Refurbished:<input type="radio" name="brand" value="Refurbished" ><br>
+
+		Shirt:<input type="checkbox" class="list" value="Shirt">
+		Trouser:<input type="checkbox" class="list" value="Trouser">
+		Pullover:<input type="checkbox" class="list" value="Pullover">
+		Sweater:<input type="checkbox" class="list" value="Sweater"> <br>
+
+			<input type="button" onclick="radioCheck()" value="Sort Out">
+		</select>
+	</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style > 
+		.box{
+		width: 20px;
+		height: 20px;
+		background-color: green;
+		margin: 2px;
+		color: white;
+		padding: 5px;
+		display: inline;
+	}
+
+	</style>
+</head>
+<body>
+	<h2>For Loop</h2>
+	<script>
+		for(var x= 1; x<=10; x++ ){
+			// document.write(x+"<br>");
+			// document.write(x+",");
+			document.write("<div class='box'>" + x+ "</div>");
+
+		}
+	</script>
+
+	<script>
+		var fruits =["Apple","Orange","Mango", "Lichi","Jackfruit"];
+		for(var x=0; x<fruits.length;x++){
+			document.write(fruits[x] + "<br>");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var mcq;
+		mcq = prompt("What is your Marks in MCQ?","");
+		// document.write(mcq);
+
+		var descriptive;
+		descriptive =parseInt( prompt("What is your Marks in Descriptive?",""));
+		// document.write(descriptive);
+
+		mcq=parseInt(mcq);
+
+		var evidence;
+		evidence =parseInt( prompt("What is your Marks in Evidence?",""));
+		// document.write(evidence);
+
+		if (mcq>=80 && descriptive>=60 && evidence>=60) {
+			alert("passed");
+		} else{
+			alert("Failed");
+		}
+
+
+		// mcq>=80? alert("Passed"): alert ("Failed")
+		// descriptive>=60? alert("Passed"): alert ("Failed")
+		// evidence>=60? alert("Passed"): alert ("Failed")
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var fname=document.trainee.fname.value;
+	</script>
+
+
+
+
+	<form name="trainee">
+		<!-- <h4>Input information</h4> -->
+		<input type="text" name="fname" placeholder="Enter name"><br> 
+		<input type="text" name="contact" placeholder="Contact Number"><br> 
+		<!-- <h4>Remarks Text Area</h4> -->
+		<textarea name="remarks" id="" cols="30" rows="10" placeholder="Write Remarks"></textarea><br> 
+		<h4>Radio Button for Sex identification</h4>
+		<input type="radio" name="sex" value="Male">Male <br> 
+		<input type="radio" name="sex" value="Female">Female <br> 
+		<!-- <h4>Checkbox For Selecting multiple Courses</h4><br> -->
+		<input type="checkbox"  class="course" value="NT">NT<br>
+		<input type="checkbox"  class="course" value="IAD">IAD<br>
+		<input type="checkbox"  class="course" value="DDD">DDD<br>
+		<input type="checkbox"  class="course" value="ESAD">ESAD<br>
+		<!-- <h4>Drop Down List for Location</h4><br> -->
+		<select name="location">
+			<option value=""disabled selected>Select Location</option>
+			<option value="Banani">Banani</option>
+			<option value="Dhanmondi">Dhanmondi</option>
+			<option value="Mirpur">Mirpur</option>
+		</select><br>
+		<input type="button" onclick="radioCheck()" value="Sort Out">
+	</form>
+</body>
+</html>

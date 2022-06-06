@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function showDD(){
+			var mydate=document.myform.mydate.value;
+			alert(mydate);
+			var d= new Date(mydate);
+			alert(d);
+
+			var week=["sunday","monday", "tuesday","wednesday","thursday","friday","saturday"];
+
+			alert(week[d.getDay()]) //ek line a avabe kore
+
+			var day=week[d.getDay()]; //avabe variable stor ekore kora jay
+			alert(day);
+
+
+
+		}
+	</script>
+	<form name="myform">
+		<input type="text" name="mydate"><br> <br>
+		<input type="button" value="SHOW Day" onclick="showDD()">
+	</form>
+</body>
+</html>

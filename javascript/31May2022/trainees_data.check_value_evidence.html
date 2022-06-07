@@ -30,7 +30,7 @@
 			display += "Remarks: " + remarks + "<br>";
 			display += "Sex: " + sex + "<br>";
 			display += "Location: " + location + "<br>";
-			display += selectedCourses + "<br>";
+			// display += selectedCourses + "<br>";
 
 			var mywin =window.open("", "", "width=400,height=300,top=300,left=400");
 
@@ -45,11 +45,11 @@
 		<input type="text" name="fname" placeholder="Enter name"><br> 
 		<input type="text" name="contact" placeholder="Contact Number"><br> 
 		<!-- <h4>Remarks Text Area</h4> -->
-		<textarea name="remarks" id="" cols="30" rows="10" placeholder="Write Remarks"></textarea><br> 
+		<textarea name="remarks" id="" cols="30" rows="10"> Write Remarks</textarea><br> 
 		<h4>Radio Button for Sex identification</h4>
 		<input type="radio" name="sex" value="Male">Male <br> 
 		<input type="radio" name="sex" value="Female">Female <br> 
-		<!-- <h4>Checkbox For Selecting multiple Courses</h4><br> -->
+		<h4>Checkbox For Selecting multiple Courses</h4> 
 		<input type="checkbox"  class="course" value="NT">NT<br>
 		<input type="checkbox"  class="course" value="IAD">IAD<br>
 		<input type="checkbox"  class="course" value="DDD">DDD<br>

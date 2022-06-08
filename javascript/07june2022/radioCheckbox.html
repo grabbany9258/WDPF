@@ -6,6 +6,38 @@
 	<title>Document</title>
 </head>
 <body>
+	<script>
+		function radioCheck(){
+			var fname=document.trainee.fname.value;
+			var contact=document.trainee.contact.value;
+			var remarks=document.trainee.remarks.value;
+			var location=document.trainee.location.value;
+			var sex=document.trainee.sex.value;
+			var courses=document.getElementsByClassName("course");
+			var selectedCourses= "<h4>selected Courses</h4>";
+
+			for(var i=0; i<courses.length; i++){
+				if(courses[i].checked){
+					selectedCourses+=courses[i].value + ",";
+				}
+			}
+			
+
+			var display="";
+			display += "Name:" + fname + "<br>";
+			display += "Contact:" + contact + "<br>";
+			display += "Remarks:" + remarks + "<br>";
+			display += "Location:" + location + "<br>";
+			display += "Sex:" + sex + "<br>";
+			display += selectedCourses + "<br>";
+
+
+			var mywin=window.open("","","height=400,width=300,top=300,left=300");
+			mywin.document.write(display);
+
+		}
+	</script>
+
 	<form name="trainee">
 		Name: <br><input type="text" name="fname" placeholder="Enter name"><br>
 		Contact: <br><input type="text" name="contact" placeholder="Enter Number"><br>
@@ -16,7 +48,16 @@
 		NT: <input type="checkbox" class="course" value="NT">
 		NT: <input type="checkbox" class="course" value="NT">
 		NT: <input type="checkbox" class="course" value="NT">
-		NT: <input type="checkbox" class="course" value="NT">
+		NT: <input type="checkbox" class="course" value="NT"> <br>
+		Select Location: <br>
+		<Select name="location">
+			<option value=""disabled selected>Select location</option>
+			<option value="banani">Banani</option>
+			<option value="dhanmondi">Dhanmondi</option>
+			<option value="mirpur">Mirpur</option> 	
+		</Select> <br> <br>
+
+		<input type="button" value="Show Details" onclick="radioCheck()">
 	</form>
 </body>
 </html>

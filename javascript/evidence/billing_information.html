@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		
+		function myform(){
+			var fname=document.bill_info.fname.value;
+			var Lname=document.bill_info.Lname.value;
+			var gender=document.bill_info.gender.value;
+			
+			var email=document.bill_info.email.value;
+			var address=document.bill_info.address.value;
+			var zip=document.bill_info.zip.value;
+			var languages=document.getElementsByClassName("language")
+			var SelectedLanguages= "Selected Language: ";
+
+			for(var i=0; i<languages.length; i++){
+				if(languages[i].checked){
+					SelectedLanguages+=languages[i].value + ",";
+
+				}
+			}
+
+			
+
+			var display="";
+			display+= "First Name:" + fname + "<br>";
+			display+= "Last Name:" + Lname + "<br>";
+			display+= "Gender:" + gender + "<br>";
+			
+			display+= "Email:" + email + "<br>";
+			display+= "Address:" + address + "<br>";
+			display+= "Zip:" + zip + "<br>";
+
+			display+= "Language:" + language + "<br>";
+
+			var mywin=  window.open("", "", "width=300,height=200,top=300,left=300");
+			mywin.document.write(display);
+			
+		}
+	</script>
+
+
+	<form name="bill_info">
+		First Name: <br> <input type="text" name="fname" placeholder="Enter first Name"> <br>
+		Last Name: <br> <input type="text" name="Lname" placeholder="Enter Last Name"> <br>
+		Gender: <br>
+		Male: <input type="radio" name="gender" value="Male">
+		 Female: <input type="radio" name="gender" value="Female"> <br>
+		 Languages: <br>
+		 Telugu:<input type="checkbox" class="language" value="Telugu">
+		 English:<input type="checkbox" class="language" value="English">
+		 Hindi:<input type="checkbox" class="language" value="Hindi"> <br>
+
+		 Email:<input type="email" name="email" placeholder="Enter your email"> <br>
+		 Address: <textarea name="address" id="" cols="20" rows="5">Input Address</textarea> <br>
+
+		 State:
+
+		 <select name="state">
+		 	<option value=""disabled selected>Choose the state</option>
+		 	<option value="New Delhi">New Delhi</option>
+		 	<option value="Mumbai">Mumbai</option>
+		 	<option value="Rajsthan">Rajsthan</option> 
+
+		 </select> <br>
+
+		 Zip: <input type="text" name="zip" > <br>
+
+		 Credit Card Type: 
+		 <select name="CC">
+		 	<option value=""disabled selected>Choose Credit Card</option>
+		 	<option value="EBL">EBL</option>
+		 	<option value="Nexus">Nexus</option>
+		 	<option value="Visa">Visa</option>
+		 </select> <br>
+
+		 <input type="button" value="SUBMIT" onclick="myform()">
+
+	</form>
+</body>
+</html>

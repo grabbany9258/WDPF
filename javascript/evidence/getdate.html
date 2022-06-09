@@ -7,26 +7,19 @@
 </head>
 <body>
 	<script>
-		function showDD(){
+		function getDate(){
 			var mydate=document.myform.mydate.value;
-			// alert(mydate);
+			alert(mydate);
 			var d= new Date(mydate);
-			// alert(d);
-
 			var week=["sunday","monday", "tuesday","wednesday","thursday","friday","saturday"];
-
-			alert(week[d.getDay()]) //ek line a avabe kore
-
-			// var day=week[d.getDay()]; //avabe variable stor ekore kora jay
-			// alert(day);
-
-
+			alert(week[d.getDay()])
 
 		}
 	</script>
-	<form name="myform">
-		<input type="text" name="mydate"><br> <br>
-		<input type="button" value="SHOW Day" onclick="showDD()">
+
+	<form name ="myform">
+		<input type="date" name="mydate" placeholder="Enter date"> <br>
+		<input type="button" value="SUBMIT" onclick="getDate()">
 	</form>
 </body>
 </html>

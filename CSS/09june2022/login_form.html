@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		input[type=email], input[type=password]{
+			width: 100%;
+			padding: 5px;
+			display: block;
+			border: 1px solid black;
+			margin: 10px 0;
+			box-sizing: border-box;
+		}
+		#login{
+			border: 5px solid red;
+			border-radius: 5px;	
+			padding: 20px;
+			background-color: #92B32C;
+			width: 500px;
+		}
+		input[type=login]{
+			widows: 100%;
+			padding: 5px;
+			margin: 15px 0;
+		}
+		input[type=submit]{
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+		}
+		input[type=submit]:hover{
+			background-color: #3BC029;
+		 	cursor: pointer;
+		}
+		input[type=email]{
+			background-image: url(email_icon.png);
+			background-repeat: no-repeat;
+			background-position: 5px 6px;
+			padding-left: 30px;
+			
+		}
+		input[type=email]:focus, input[type=password]:focus{
+			background-color: #87ADA6;
+			text-transform: uppercase;
+		}
+		#login textarea{
+			width: 100%;
+			box-sizing: border-box;
+			padding: 10px;
+			height: 100px;
+			margin: 10px 0;
+			resize: none;
+			border: 1px solid black;
+			border-radius: 8px;	
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="login">
+		<form action="">
+			<label for="email">Email</label>
+			<input type="email" name="email">
+			<label for="password">Password</label>
+			<input type="password" name="password">
+			<label for="Address">Address</label>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<input type="submit" name="SUBMIT" value="Login">
+		</form>
+	</div>
+</body>
+</html>

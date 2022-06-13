@@ -1,0 +1,167 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.topbar{
+	background-color: #30b6e7;
+	overflow: hidden;
+}
+.contact-icon{
+	width: 80%;
+	float: left;
+}
+.contact-icon i{
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+}
+.contact-icon a{
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	text-decoration: none;
+}
+.social-icon{
+	width: 20%;
+	float: right;
+}
+.social-icon i{
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+}
+.social-icon a{
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.header{
+	overflow: hidden;
+}
+.logo{
+	width: 20%;
+	float: left;
+}
+.logo img{
+	height: 70px;
+}
+.navbar{
+	width: 55%;
+	float: right;
+	overflow: hidden;
+}
+.navbar a{
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 30px;
+	color: #30b6e7;
+}
+.navbar a:hover{
+	background-color: #ddd;
+	transition: background-color 0.6s ease;
+}
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+.dropdown .btndrop{
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: 18px;
+	color: #30b6e7;
+	padding: 30px 16px;
+}
+.btndrop:hover{	
+	background-color: #ddd;
+	transition: background-color 0.6s ease;
+	cursor: pointer;
+}
+.dropdown-content{
+	position: absolute;
+	width: 250px;
+	background-color: #f9f9f9;
+	z-index: 1;
+	height: 0;
+	transition: opacity .6s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+.dropdown-content a{
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	color: #30b6e7;
+	display: block;
+}
+.dropdown-content a:hover{
+	background-color: #ddd;
+	transition: background-color 0.6s ease;
+}
+.dropdown:hover .dropdown-content{
+	opacity: .9;
+	height: auto;
+}
+
+.heading{
+	background-color: #30b6e7;
+}
+.heading h2{	
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+.about{
+	overflow: hidden;
+}
+.story{
+	width: 45%;
+	float: left;
+	padding: 10px;
+}
+.story-image{
+	width: 45%;
+	float: right;
+}
+.story-image img{
+	height: 300px;
+	padding: 10px;
+	border-radius: 20px;
+	margin-top: 55px;
+}
+
+.product{
+	width: 22%;
+	float: left;
+	margin: 15px;
+	padding: 15px;
+	text-align: center;
+}
+.product img{
+	height: 200px;
+	width: 200px;
+	padding: 10px;
+	border-radius: 25px;
+}
+.footer{
+	padding: 25px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #30b6e7;
+	text-align: center;
+}
+.footer i{
+	padding: 5px;
+	font-size: 20px;
+}

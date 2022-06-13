@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Email Validation:</h1>
+    <script>
+            var email = prompt("Enter your Email")
+            var pattern = email.search(/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/);
+            var status=false
+            if(pattern==-1){
+                alert("Email Address Wrong")
+            }
+            else{
+                alert("Email Address Correct")
+            }
+    </script>
+</body>
+</html>

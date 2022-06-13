@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		function radioCheck(){
+
+			var fname=document.trainee.fname.value;
+			var contact=document.trainee.contact.value;
+			var remarks=document.trainee.remarks.value;
+			var sex=document.trainee.sex.value;
+			var location=document.trainee.location.value;
+			var courses = document.getElementsByClassName("course");
+			var selectedCourses = "<h2>Selected Courses:</h2>";
+
+			for(var i=0; i<courses.length; i++){
+				if(courses[i].checked){
+					selectedCourses += courses[i].value + ",";
+				}
+			}
+
+			var display="<h1>Trainees All Data</h1>";
+			display += "Name: " + fname + "<br>";
+			display += "contact: " + contact + "<br>";
+			display += "Remarks: " + remarks + "<br>";
+			display += "Sex: " + sex + "<br>";
+			display += "Location: " + location + "<br>";
+			display += selectedCourses + "<br>";
+
+			var mywin =window.open("", "", "width=400,height=300,top=300,left=400");
+			mywin.document.write(display);
+
+		}
+	
+	</script>
+	<h1>Trainee's Data</h1>
+
+	<form name="trainee">
+		
+		Name: <br>
+		<input type="text" name="fname" placeholder="Enter name"><br> 
+		Contact: <br>
+		<input type="text" name="contact" placeholder="Contact Number"><br> 
+		
+		Remarks: <br>
+		<textarea name="remarks" id="" cols="18" rows="5" placeholder="Write Remarks"></textarea><br> <br> 
+
+		Radio Button for Sex identification: <br> <br> 
+		<input type="radio" name="sex" value="Male">Male <br> 
+		<input type="radio" name="sex" value="Female">Female <br> <br>
+
+		Checkbox For Selecting multiple Courses: <br> <br>
+		<input type="checkbox"  class="course" value="NT">NT<br>
+		<input type="checkbox"  class="course" value="IAD">IAD<br>
+		<input type="checkbox"  class="course" value="DDD">DDD<br>
+		<input type="checkbox"  class="course" value="ESAD">ESAD<br> <br>
+
+		Drop Down List for Location: <br> <br>
+		<select name="location">
+			<option value=""disabled selected>Select Location</option>
+			<option value="Banani">Banani</option>
+			<option value="Dhanmondi">Dhanmondi</option>
+			<option value="Mirpur">Mirpur</option>
+		</select><br> <br>
+
+		<input type="button" onclick="radioCheck()" value="Show Details">
+	</form>
+</body>
+</html>

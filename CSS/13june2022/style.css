@@ -87,3 +87,8 @@ ul{
     color: #000;
     padding-right: 250px;
 }
+.btn-group{
+    display: flex;
+    width: 40%;
+    position: relative;
+}

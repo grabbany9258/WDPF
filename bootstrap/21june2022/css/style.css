@@ -28,4 +28,24 @@
   	text-align: justify;
   }
 
-  
+  .breadcrumb>li + li:before{
+  	content: ">";
+  }
+  .breadcrumb{
+  	background-color: #978787;
+  	border-radius: 0;
+  }
+
+
+/*for layout_3.html : Link*/
+
+  .link{
+  	margin-top: 20px;
+  	line-height: 30px;
+  }
+
+  .log{
+  	float: right;
+  	margin-top: 10px;
+  	margin-right: 10px;
+  }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br> <br>
+	<h1>Tooltip</h1>
+	<a href="#" id="about" title="Some information for about us" data-content="This is data content">About us</a>
+
+	<button class="btn btn-success">Click Here</button>
+	<script>
+		$(document).ready(function() {
+		// 	$('#about').popover();	
+		// });
+
+		jQuery('.btn-success').popover({title:"My message" ,  placement:"bottom"});
+
+	</script>
+
+	</div>
+</body>
+</html>

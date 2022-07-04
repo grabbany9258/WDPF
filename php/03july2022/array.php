@@ -1,6 +1,6 @@
 <?php
     $fruits =["Apple", "Orange", "Mango", "Jackfruite", "Lichi"];
-    //Numeric indexed array
+    //Numeric auto indexed array
     echo $fruits[0];
     echo "<br>";
 
@@ -13,12 +13,16 @@
     //Associative array
 
     var_dump($dis);
+    echo "<pre>";
 
 
     echo "<br>";
 
     $dis=["Dhaka"=>"jam", "Rajshahi"=>"mango", "Khulna"=>"Shipyard"];
     var_dump($dis);
+
+    echo "<br>";
+    print_r($dis);
 
 
 ?>

@@ -6,7 +6,11 @@
     $output3 ="This is one line. \r And this is another line.";
 
 
+<<<<<<< HEAD
     echo "<pre>";
+=======
+    // echo "<pre>";
+>>>>>>> 92d7257ed9fd9de8b0a03c1f0dcbc5be0929b057
     echo $output;
 
     echo "<br>";
@@ -15,7 +19,11 @@
     echo "<br>";
     echo $output2;
 
+<<<<<<< HEAD
     
+=======
+    echo "<br>";
+>>>>>>> 92d7257ed9fd9de8b0a03c1f0dcbc5be0929b057
     echo $output3;
 
     echo "<br>";

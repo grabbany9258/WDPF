@@ -13,7 +13,11 @@
     echo "<br>";
     printf("Today's %s price is Taka: %f", $meal, $price );
 
-    // echo "<br>";
+    echo "<br>";
+
+    $cost = sprinf ("$%.2f", 43.2)
+
+    echo "<br>";
 
     $output = sprintf("Today's %s price is Taka: %f", $meal, $price ); //sprintf a output hoy na.
 

@@ -13,7 +13,7 @@
         if(isset($_POST['submit'])){
             $f = $_POST['first'];
             $l = $_POST['last'];
-           
+            
             if($f==null || $l==null){
                 echo "Please put both values";}
                 else{ 

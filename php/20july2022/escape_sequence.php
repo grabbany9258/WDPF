@@ -6,6 +6,7 @@
     $output3 ="This is one line. \r And this is another line.";
 
 
+    
 <<<<<<< HEAD
     echo "<pre>";
 =======

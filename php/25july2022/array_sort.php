@@ -9,6 +9,9 @@
 
     print_r($cities);
 
+    rsort($cities);
+    print_r($cities);
+
 
     $numbers =[5,15,28,100,7,24,357];
     sort($numbers);

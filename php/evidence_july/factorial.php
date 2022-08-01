@@ -1,12 +1,12 @@
 <?php
 
 if(isset($_POST['submit'])){
-    $number= $_POST['number'];
-    echo Factorial($number);
+    $x= $_POST['number'];
+    echo "The factorial of " . $x . " is " . Factorial($x);
 }
 
 function factorial($grb){
-    $factorial = 1;
+     $factorial = 1;
     for ($i = 1; $i <= $grb; $i++){
     $factorial = $factorial * $i;
     }
@@ -21,7 +21,7 @@ function factorial($grb){
 
 <h2>Factorial Number</h2>
     <form action="" method="post">
-        <input type="text" name="number" value="<?php if(isset($number)) echo $number; ?>" placeholder="Enter user number"><br>
+        <input type="text" name="number"  placeholder="Enter user number" value="<?php if(isset($_POST['number'])) echo $_POST ['number'] ?>"><br>
         <input type="submit" name="submit" value="CHECK">
 
     </form>

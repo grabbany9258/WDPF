@@ -1,0 +1,16 @@
+<?php
+class SimpleClass
+{
+    // property declaration
+    public $var = 'Hello Simple Class';
+ 
+    // method declaration
+    public function displayVar() {
+        echo $this->var;
+    }
+}
+$obj=new SimpleClass;
+$obj->displayVar();
+echo $this->var;
+
+?>

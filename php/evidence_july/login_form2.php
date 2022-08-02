@@ -15,35 +15,35 @@ if(isset($_POST['submit'])){
 
 if($login == null && $email == null){
     echo "Enter your name & email";
-    // return;
+    return;
 
-// }else if($login == null){
-//     echo "Enter your name";
+}else if($login == null){
+    echo "Enter your name";
 
-// }else if(strlen($login)>8 || strlen($login)<4){
-// echo "Name must be 4 to 8";
-// }
+}else if(strlen($login)>8 || strlen($login)<4){
+echo "Name must be 4 to 8";
+}
 
-// else{
-//     $validLogin = 1;
-// }
+else{
+    $validLogin = 1;
+}
 
-// // Login part end
+// Login part end
 
 
-// // Email part start
+// Email part start
 
-// if($email == null){
-//     echo "Enter your email";
-// return;
-// }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-//     echo "Valid email must";
-//     return;
-// }else{
-//     $validEmail = 1;
-// }
-// if($validLogin == 1 && $validEmail == 1){
-//     echo "You are successfully logged in!";
+if($email == null){
+    echo "Enter your email";
+return;
+}else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "Valid email must";
+    return;
+}else{
+    $validEmail = 1;
+}
+if($validLogin == 1 && $validEmail == 1){
+    echo "You are successfully logged in!";
  }
 }
 ?>

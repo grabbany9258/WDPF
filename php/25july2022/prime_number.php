@@ -47,7 +47,7 @@
   }
   
   function primeCheck($n){
-    if($n == 1){
+    if($n == 1){ 
         return "$n is not a prime number";
     }else if($n == 2){
         return "$n is a prime number";

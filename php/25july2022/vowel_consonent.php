@@ -17,11 +17,11 @@
 function check_vowel($ch) 
 { 
 if ($ch == 'a' || $ch == 'e' ||  $ch == 'i' || $ch == 'o' ||  $ch == 'u') 
-  echo "$ch is aVowel" ; 
+  echo "$ch is a Vowel" ; 
 else
   echo "$ch is a Consonant"; 
 } 
-check_vowel('q');
+check_vowel('A');
 
 
 ?>

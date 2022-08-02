@@ -1,7 +1,7 @@
 <?php
 $path ="myfile.txt";
 
-echo $output = realpath($path);
+echo $output = realpath($path); // realpath or full path
 echo "<br>";
 
 $path1 ="../27july2022/result.txt";

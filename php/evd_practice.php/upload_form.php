@@ -7,17 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Upload file</h1>
     <?php
     // echo "<pre>";
     //     print_r($_FILES);
-    if(isset($_POST['submit'])){
+     if(isset($_POST['submit'])){
 
         $name= $_FILES['file']['name'];
         $ext= explode(".", $name);
         $ext=strtolower(end($ext));
         
-
-
         $photo= $_FILES['file']['type'];
         $temp= $_FILES['file']['tmp_name'];
         $error=$_FILES['file']['error'];
@@ -27,7 +26,7 @@
 
         $errors = array();
 
-        if($size>1024*200){
+        if($size>1024*200){ 
             $errors[]= "Size must be within 100KB";  
          }
 

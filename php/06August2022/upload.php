@@ -24,7 +24,7 @@
         $error= $_FILES['image']['error'];
         $size= $_FILES['image']['size'];
 
-        // $filetypes = array("jpg", "png");
+        $filetypes = array("jpg", "png");
 
         if($size>1024*400){
             echo "File size must be 400KB";
@@ -34,14 +34,17 @@
 
 
         else{
-            echo move_uploaded_file(<img src="\uploads/"..$name>);
+        $result= move_uploaded_file($tmp, 'uploads/' .$name );
+        if($result==1){
+
+            echo "<h4> Uploaded Successfully </h4>";
+            echo "<img src='uploads/$name'>";
+            
 
         }
+             
 
-    
-
-
-
+        }
 
     }
     

@@ -1,0 +1,47 @@
+#### Mysql server connection #####
+steps:
+1.mysql -h localhost -u root -p
+Enter without password 
+## To see all database ##
+3.show databases;
+## To create database ##
+4.create database wdpf51;  (or any name)
+## To see all database ##
+5.show databases;
+
+
+
+#######################
+
+## All columns from a table ###
+
+select * from employees;  // star mane sob gulo bujahy
+
+
+## specific column newar jonno ## 
+
+SELECT employeeNumber, lastName, firstName From employees; 
+
+## Order by ##
+SELECT employeeNumber, lastName, firstName From employees order by firstName DESC;  // ASC ascending bydefault and DESC for descending.
+
+
+## Condition with where ##
+
+SELECT employeeNumber, lastName, firstName, officeCode FROM employees WHERE officeCode = 4
+
+## Individual 2 ta ba 3 ta ba tar besi pete chaile ##
+SELECT employeeNumber, lastName, firstName, officeCode FROM employees WHERE officeCode =3 OR officeCode = 5;
+
+## Avabeo hoy ##
+SELECT employeeNumber, lastName, firstName, officeCode FROM employees WHERE officeCode IN(3,5);
+
+###### specific jobTiyle ####
+SELECT employeeNumber, lastName, firstName, email FROM employees WHERE officeCode = 1 AND jobTitle = "Sales Rep"; 
+
+## Distinct ###
+SELECT DISTINCT country FROM customers; 
+
+## Distinct ##
+SELECT DISTINCT country FROM customers ORDER by country; 
+

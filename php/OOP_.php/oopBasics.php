@@ -1,19 +1,30 @@
 <?php
      class fruite{
-        public $name;
-        public $color;
+        public $name= "Hello bangladesh";
+        public $color = "i am the student of WDPF";
 
-        function set_name($name){
-            $this->name = $name;
+        function set_name(){
+          echo  $this->name ;
         }
 
-        function get_name(){
-            return $this->name;
-        }
+         function get_name(){
+             echo $this->color;
+        // }
+        // function set_color ($color){
+        //     $this->color = $color;
+        // }
+        // function get_color(){
+        //     return $this->color;
+        // }
     }
+}
 
-    $apple = new fruite;
-    $apple->set_name('Apple');
-    echo $apple->get_name();
+    $obj = new fruite;
+
+    $obj->set_name();
+    $obj->get_name();
+    // $obj->set_color('Red');
+    // echo $obj->get_name();
+    // echo $obj->get_color();
 
 ?>

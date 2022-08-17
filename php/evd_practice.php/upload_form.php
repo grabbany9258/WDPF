@@ -44,15 +44,11 @@
             $result= move_uploaded_file($temp, 'uploads/' .$name);
             if($result==1){
                 echo "You have uploaded your file successfully";
+                echo "<img src='uploads/ $name'>";
             }
         }
     }
-
-        
-
     ?>
-
-
     <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="file"><br>
         <input type="submit" name="submit" value="UPLOAD">

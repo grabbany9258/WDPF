@@ -10,10 +10,14 @@
     ?>
 
     <table border="1">
-        <tr><th>Country Name</th><th>Capital</th></tr>
+        <tr>
+            <th>Country Name</th>
+            <th>Capital</th>
+        </tr>
 
     <?php
-    foreach($countries as $country=>$capital){ ?>
+    foreach($countries as $country=>$capital){ 
+    ?>
 
     <tr>
         <td><?php echo $country; ?></td>

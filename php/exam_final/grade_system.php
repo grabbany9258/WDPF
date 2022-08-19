@@ -17,27 +17,41 @@
     <?php
         if(isset($_POST['submit'])){
         $num = $_POST['number'];
+        echo grade($num);
+    }
 
+
+
+        function grade($num){
+
+       
         if($num==""){
-            echo "You must have to put your marks";
+            return "You must have to put your marks";
         }
-        elseif(!is_int($num)){
-            echo "You have to put Marks as Number not Letter";
+       
+        else if($num>=90 && $num<=100){ 
+            return "You have obtained A+ grade";
         }
-
-        elseif($num>=90){
-            echo "You have obtained A+ grade";
+        
+        else if($num>=80 && $num<=89){
+            return "You have obtained A grade";
         }
-        elseif($num>=80){
-            echo "You have obtained A grade";
+        else if($num>=60 && $num<=79){
+            return "You have obtained A- grade";
         }
-        elseif($num>=60){
-            echo "You have obtained A- grade";
+        
+        else if($num>=0 && $num<=59){
+            return "You have obtained F grade";
+        }
+        else if($num>=101 && !is_int($num)){
+            return "You have to put number between 1 to 100 instead of putting letter or more than 100";
         }
         else{
-            echo "You have obtained F grade";
+            return "You have puted mis information, Please Enter Proper Values.";
         }
+       
     }
+
     ?>
 </body>
 </html>

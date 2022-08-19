@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>Upload file</h1>
-<?php
 
+<?php
 if(isset($_POST['submit'])){
     
     // echo"<pre>";

@@ -1,28 +1,19 @@
 
 <h1>factorial value:</h1>
 
-
-<?php
-     
+<?php 
     if (isset($_POST['submit'])){
         $x= $_POST['number'];
-        echo "The value of " . $x . " is " . Factorial($x);
+        echo "The value of " . $x . " is " . factorial($x);
         echo "<br>";
     }
-
     function factorial($grb){
-        $factorial =1 ;
+         $factorial =1 ;
         for($i=1; $i<=$grb; $i++){
             $factorial = $factorial * $i ;
         }
         return $factorial;
-
-
     }
-
-
-
-
 ?>
 
 <form action="" method="post">

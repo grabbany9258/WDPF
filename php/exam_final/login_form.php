@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .null{
+            color:#0B7017; 
+        }
+    </style>
+
+
 </head>
 <body>
     <h1>Login Form</h1>
@@ -24,7 +32,7 @@
         $validPass = 0;
 
         if($email == null && $pass == null){
-            echo "Please Enter Email & Password both.";
+            echo "<h3 class='null'>Please Enter Email & Password both.</h3>";
             return;
         }
 

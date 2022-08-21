@@ -9,17 +9,17 @@
 // print_r($_FILES);
 
 if(isset($_POST['submit'])){
-$name=$_FILES['grb']['name'];
-$ext = explode(".", $name);
-$ext = strtolower(end($ext));
+    $name=$_FILES['grb']['name'];
+    $ext = explode(".", $name);
+    $ext = strtolower(end($ext));
 
-$type=$_FILES['grb']['type'];
-$tmp=$_FILES['grb']['tmp_name'];
-$error=$_FILES['grb']['error'];
-$size=$_FILES['grb']['size'];
+    $type=$_FILES['grb']['type'];
+    $tmp=$_FILES['grb']['tmp_name'];
+    $error=$_FILES['grb']['error'];
+    $size=$_FILES['grb']['size'];
 
-$filetypes = array("jpg","png");
-$errors =array();
+    $filetypes = array("jpg","png");
+    $errors =array();
 
 if($size>1024*400){
     $errors[] = "File size must be 400KB";
@@ -33,17 +33,9 @@ if(count($errors)>0){
     echo $err .  "<br>";
 }
 
-
-
-
 else{
     $results= move_uploaded_file($tmp, 'uploads/' .$name);
     echo "Logged in succesful";
 }
-
-
-
-
 }
-
 ?>

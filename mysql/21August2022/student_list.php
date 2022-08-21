@@ -19,23 +19,28 @@
     <div class="container">
         <table class="table table-striped">
             <tr>
-                <th>Number</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Student Email</th>
+                <th>Student Phone</th>
+                <th>Action</th>
             </tr>
 
             <?php
-                $sql = "SELECT * FROM employees";
+                $sql = "SELECT * FROM students";
                 $result = $db->query($sql);
-                while($data= $result->fetch_assoc()){
+                while($data= $result->fetch_assoc()){ 
             ?> 
             
                     <tr>
-                        <td><?php echo $data['employeeNumber']; ?></td>
-                        <td><?php echo $data['firstName']; ?></td>
-                        <td><?php echo $data['lastName']; ?></td>
-                        <td><?php echo $data['email']; ?></td>
+                        <td><?php echo $data['student_id']; ?></td>
+                        <td><?php echo $data['student_name']; ?></td>
+                        <td><?php echo $data['student_email']; ?></td>
+                        <td><?php echo $data['student_phone']; ?></td>
+                    
+                       
+                        <td><a href="student_delete.php?id=<?php echo $data['student_id'] ?> "onclick="return confirm('Are you sure')"> Delete</a></td>
+
                         
                     </tr>
 
@@ -46,6 +51,8 @@
 
         </table>
     </div>
-   
+
+    
+    <a href="student_entry.php">New Data</a>
 </body>
 </html>

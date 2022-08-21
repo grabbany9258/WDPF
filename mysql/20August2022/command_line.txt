@@ -1,0 +1,16 @@
+//With engine
+CREATE TABLE products (
+id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+sku CHAR(8) NOT NULL,
+name VARCHAR(35) NOT NULL,
+price DECIMAL(6,2)
+) ENGINE=MyISAM;
+
+
+//Without engine (inno DB default)
+CREATE TABLE products1 (
+id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+sku CHAR(8) NOT NULL,
+name VARCHAR(35) NOT NULL,
+price DECIMAL(6,2)
+) 

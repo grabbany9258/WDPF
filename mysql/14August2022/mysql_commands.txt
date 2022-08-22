@@ -3,11 +3,41 @@ steps:
 1.mysql -h localhost -u root -p
 Enter without password 
 ## To see all database ##
-3.show databases;
+3.SHOW DATABASES;
 ## To create database ##
 4.create database wdpf51;  (or any name)
 ## To see all database ##
-5.show databases;
+5.SHOW DATABASES;
+
+## To use database ##
+6. USE test_mosque;  (Data base name jeta dewa hbe seta.)
+
+## To create table ##
+7.  CREATE TABLE family( (akhn a jeta table ar name seta dite hbe..amr table family)
+        -> name VARCHAR(50) NOT NULL,
+        -> relation VARCHAR(50) NOT NULL,
+        -> age INT NOT NULL,
+        -> expense VARCHAR (60) NOT NULL);
+
+## To see table ##
+8. DESCRIBE family; (akhn a table ar name dite hbe)
+
+## Insert values in table ##
+9. INSERT INTO family VALUE("mahir", "brother", 16, "6000");
+
+## To show inserted Value ##
+10. SELECT * FROM family;
+
+## To insert multiple values at a time ##
+11. INSERT INTO family VALUE("ruhul_amin", "father", 58, "20000"),
+    -> ("trisna", "wife", 23, "2000"),
+    -> ("rahima", "sister", 26, "2000"),
+    -> ("rabbany", "brother", 25, "10000");
+
+## Add a column in existing database ##
+ALTER TABLE family ADD COLUMN ID VARCHAR (10);
+
+    
 
 
 

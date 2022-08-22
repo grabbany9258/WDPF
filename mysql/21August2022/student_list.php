@@ -53,6 +53,6 @@
     </div>
 
     
-    <a href="student_entry.php">New Data</a>
+    <a href="student_entry.php"><h2>Add Data</h2></a>
 </body>
 </html>

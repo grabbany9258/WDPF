@@ -1,4 +1,4 @@
-<?php $db = new mysqli('localhost', 'root', '', 'wdpf51'); ?>
+<?php $db = new mysqli('localhost', 'root', '', 'wdpf51');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Student Entry</h1>
+<h1>Student Entry</h1>
     <form action="" method="post">
         ID: <br>
         <input type="number" name="id" placeholder="Enter your ID"> <br>
@@ -26,19 +26,18 @@
 
     <?php
     if(isset($_POST['submit'])){
-        //extract($_POST); sudhu ata diye nicher sob gula kora jay.
-        $id = $_POST['id'];
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
+       $id = $_POST['id'];
+       $name = $_POST['name'];
+       $email = $_POST['email'];
+       $phone = $_POST['phone'];
 
-        $sql = "INSERT INTO students VALUES ('$id', '$name', '$email', '$phone')";
-        $db->query($sql);
-        if($db->affected_rows>0){
+       $sql = "INSERT INTO students VALUES ('$id','$name', '$email','$phone' )";
+       $db->query($sql);
+       if($db->affected_rows>0){
         echo "Successfully inserted";
-
        }
     }
-   ?> 
+
+    ?>
 </body>
 </html>

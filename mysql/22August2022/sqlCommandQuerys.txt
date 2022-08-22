@@ -1,0 +1,62 @@
+## Order by firstname ##
+1. SELECT employeeNumber, lastName,firstName FROM employees ORDER BY firstName;
+
+## Order by "DESC" ##
+2. SELECT employeeNumber, lastName,firstName FROM employees ORDER BY firstName DESC;
+
+## Specific data with where ##
+3. SELECT employeeNumber, firstName, email, jobTitle FROM employees WHERE jobTitle = 'sales Rep';
+
+##  More Specific korte ##
+4. SELECT employeeNumber, firstName, email, jobTitle,officeCode FROM employees WHERE jobTitle = 'sales Rep' AND officeCode=1;
+
+## More specific "OR" diye ## 
+5. SELECT employeeNumber, firstName, email, jobTitle,officeCode FROM employees WHERE jobTitle = 'sales Rep' OR officeCode=1;
+
+## Specify Range with IN ##
+6. SELECT employeeNumber, firstName, email, jobTitle,officeCode FROM employees WHERE jobTitle = 'sales Rep' AND officeCode IN(1,2,3);
+
+## "Between" ##
+7. SELECT orderNumber, shippedDate, status, customerNumber FROM orders WHERE customerNumber BETWEEN 100 AND 150;
+
+## "BETWEEN" ##
+8. SELECT orderNumber, shippedDate, status FROM orders WHERE shippedDate BETWEEN '2004-01-01' AND '2004-12-31'; 
+
+## "LIKE" ##
+9. SELECT employeeNumber, firstName , email FROM employees WHERE firstName LIKE 'l%';
+
+## "LIKE" ##
+10. SELECT employeeNumber, firstName , email FROM employees WHERE firstName LIKE '%y';
+
+## "LIMIT" ##
+11. SELECT employeeNumber, firstName , email FROM employees LIMIT 5;
+
+## "LIMIT" ##
+12. SELECT employeeNumber, firstName , email FROM employees LIMIT 5,5;
+
+## "COUNT" ## Total Row dekhte.. 
+13. SELECT COUNT(*) FROM employees;
+
+## Rename with "AS" ##
+14. SELECT COUNT(*) AS TOTAL FROM employees;
+
+## "AMOUNT" ## 
+15. SELECT SUM(amount) AS 'Total Amount' FROM payments;
+
+## SUM with "GROUP BY" ## bujhi nai.
+16. SELECT customerNumber, SUM(amount) AS 'Total Amount' FROM payments GROUP BY customerNumber;  
+
+## Total amount DESC ##
+17. SELECT customerNumber, SUM(amount) AS 'Total Amount' FROM payments GROUP BY customerNumber; 
+
+## Total Amount DESC ##
+18. SELECT customerNumber, SUM(amount) AS 'Total Amount' FROM payments GROUP BY customerNumber ORDER BY SUM(amount) DESC; 
+
+## is null ##
+19. SELECT customerNumber, city, country, salesRepEmployeeNumber FROM customers WHERE salesRepEmployeeNumber IS NULL;
+
+## "UPDATE" ##
+20. UPDATE employees SET lastName = 'Hossen', firstName='Amzad', email= 'amzad@gmail.com' WHERE employeeNumber =1002;
+
+## UDATE with Unique field email ##
+21. UPDATE employees SET lastName = 'Hossen', firstName='Amzad', email= 'amz@gmail.com' WHERE email ='amzad@gmail.com';

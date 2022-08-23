@@ -11,6 +11,7 @@ include_once('dbconfig.php');
 
    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
    $result = $db->query($sql);
+   
    if ($result->num_rows!=1){
         $msg = "Email or password may be wrong";
         header("Location:index.php?m=$msg");

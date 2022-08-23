@@ -14,7 +14,4 @@ if(isset($_GET['m'])){
     echo  $msg;
 }
 
-   
-
-
 ?>

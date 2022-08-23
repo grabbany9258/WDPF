@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>student list</h1>
+    <h1>Student list</h1>
 
     <?php
     $sql = "SELECT * FROM students";
     $result = $db->query($sql);
     echo "<h2>Total Record Found : $result->num_rows</h2>";    //num_rows akta built in property to count total data or record found
-    while($data = $result->fetch_object()){
+    while($data = $result->fetch_rows()){
         echo "ID: " .$data->student_id;
         echo "Name: " .$data->student_name;
         echo "Email: " .$data->student_email;

@@ -1,4 +1,4 @@
-<?php $db = new mysqli('localhost', 'root', '', 'wdpf51');?>
+<?php $db = new mysqli('localhost', 'root', '', 'wdpf51')  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +31,13 @@
        $email = $_POST['email'];
        $phone = $_POST['phone'];
 
-       $sql = "INSERT INTO students VALUES ('$id','$name', '$email','$phone' )";
-       $db->query($sql);
-       if($db->affected_rows>0){
-        echo "Successfully inserted";
-       }
+       $sql = "INSERT INTO students VALUES('$id', '$name', '$email', '$phone')";
+                $db->query($sql);
+               if ($db->affected_rows>0){
+                echo "Inserted Successfully";
+               }
+
+       
     }
 
     ?>

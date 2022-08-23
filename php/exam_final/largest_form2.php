@@ -22,7 +22,16 @@
             }
 
         }
+
+        $min = $numbers[0];
+        foreach($numbers as $num){
+            if($num<=$min){
+                $min = $num;
+            }
+
+        }
         echo "<h2>maximum Number is $max</h2>";
+        echo "<h2>minimum Number is $min</h2>";
             
 
         

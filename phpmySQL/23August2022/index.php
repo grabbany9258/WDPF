@@ -7,7 +7,7 @@
     <input type="submit" name="submit" value="LOGIN"> 
 
 </form>
-
+ 
 <?php
 if(isset($_GET['m'])){
     $msg =  $_GET['m'];

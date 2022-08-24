@@ -5,7 +5,7 @@ include_once('dbconfig.php');
     $pass = $_POST['pass'];
   echo "<br>";
 
-   $pass = sha1($pass);
+   $pass = sha1($pass); 
 
   //echo "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
 
@@ -18,7 +18,7 @@ include_once('dbconfig.php');
    }
    else{
     session_start();
-    $_SESSION['email'] = $email;
+    $_SESSION['email'] = $email;  // ata ki bujhaice ?
     header("Location:dashboard.php");
 }
 

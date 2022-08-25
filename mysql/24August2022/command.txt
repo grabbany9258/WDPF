@@ -1,0 +1,18 @@
+## Copying a Table ##
+1. CREATE TABLE employees2 SELECT * FROM employees;
+
+## Create table with firstname & lastname ## 
+2. CREATE TABLE employees3 SELECT firstname, lastname FROM employees;
+
+## ADD new column ##
+ALTER TABLE employees2 ADD COLUMN birthdate DATE;
+
+## Drop Column ##
+ALTER TABLE employees2 DROP birthdate;
+
+
+## Change column ## 
+ALTER TABLE employees2 CHANGE COLUMN homedist homedistrict VARCHAR(20) NOT NULL;  
+
+## Create user ##
+create user 'amzad'@'localhost' identified by 'abcd';

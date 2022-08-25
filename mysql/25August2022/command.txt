@@ -1,0 +1,31 @@
+## Create user ##
+create user 'tokey'@'localhost' identified by 'abcd';
+
+## Rename user ##
+Rename USER 'amzad'@'localhost' To 'mahir'@'localhost';
+
+## privilage ##
+GRANT SELECT on wdpf51. * to 'rabbany'@'localhost';
+
+## GRand UPDATE ##
+GRANT UPDATE on wdpf51. * to 'rabbany'@'localhost';
+
+## GRand DELETE ##
+GRANT DELETE on wdpf51. * to 'rabbany'@'localhost';
+
+## GRand INSERT ##
+GRANT INSERT on wdpf51. * to 'rabbany'@'localhost';
+
+## ak sathe korte ##
+GRANT UPDATE, DELETE on wdpf51.* TO 'tokey'@'localhost';
+
+## privilage bad dite ##
+revoke insert on wdpf51.* FROM 'rabbany'@'localhost';
+
+
+
+
+
+
+
+

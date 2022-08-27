@@ -1,0 +1,50 @@
+DELIMITER //
+CREATE TRIGGER after_student_entry
+AFTER INSERT ON students
+FOR EACH ROW
+
+BEGIN
+INSERT INTO student_table_log VALUES(NULL, NEW.student_id, NEW.student_name, NEW.student_email, NEW.student_phone,'INSERT', CURRENT_TIMESTAMP());
+
+END //
+
+DELIMITER ;
+
+
+
+############################
+
+
+DELIMITER //
+CREATE TRIGGER after_student_update
+AFTER UPDATE ON students
+FOR EACH ROW
+
+BEGIN
+INSERT INTO student_table_log VALUES(NULL, NEW.student_id, NEW.student_name, NEW.student_email, NEW.student_phone,'UPDATE', CURRENT_TIMESTAMP());
+
+END //
+
+DELIMITER ;
+
+
+##############################
+
+DELIMITER //
+CREATE TRIGGER after_student_delete
+AFTER DELETE ON students
+FOR EACH ROW
+
+BEGIN
+INSERT INTO student_table_log VALUES(NULL, NEW.student_id, NEW.student_name, NEW.student_email, NEW.student_phone,'DELETE', CURRENT_TIMESTAMP());
+
+END //
+
+DELIMITER ;
+
+
+
+
+
+
+

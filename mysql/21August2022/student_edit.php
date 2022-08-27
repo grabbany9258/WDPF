@@ -9,24 +9,14 @@
 </head>
 <body>
     <?php 
-echo $id = $_REQUEST['id'];
+        echo $id1 = $_GET['id'];
+        $sql = "SELECT * FROM students WHERE student_id = '$id1'";
+        $result = $db->query($sql);
+        $data = $result->fetch_assoc();
 
-$sql = "SELECT * FROM students WHERE student_id = '$id'";
-$result = $db->query($sql);
-$data = $result->fetch_assoc();
-
-
-    if(isset($_POST['submit'])){
-        extract($_POST);
-        $sql = "UPDATE students SET student_id = '$id', student_name = '$name', student_email = '$email', student_phone='$phone' WHERE student_id = '$id'";
-        $db->query($sql);
-        if($db->affected_rows>0){
-            echo "Successfully Updated";
-       }
-    }
-  
     ?>
-    <h1>Student Entry System</h1>
+
+    <h1>Student Entry System</h1> 
     <form action="" method="post">
         <input type="number" name="id" value="<?php echo $id; ?>"placeholder="Enter Unique ID"><br>
         <input type="text" name="name" value="<?php echo $data['student_name']; ?>" placeholder="Enter name"><br>
@@ -34,8 +24,18 @@ $data = $result->fetch_assoc();
         <input type="text" name="phone" value="<?php echo $data['student_phone']; ?>" placeholder="Enter phone number"><br>
         <input type="submit" name="submit" value="UPDATE">
     </form>
+
+    <?php
+        if(isset($_POST['submit'])){
+            extract($_POST);
+            $sql = "UPDATE students SET student_id = '$id', student_name = '$name', student_email = '$email', student_phone='$phone' WHERE student_id = '$id1'";
+            $db->query($sql);
+            if($db->affected_rows>0){
+                header("Location:student_edit.php?id=$id");
+        }
+        }
+    ?>  
     <br>
     <a href="student_list.php">Student List</a>
-    
 </body>
 </html>

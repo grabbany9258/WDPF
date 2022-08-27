@@ -16,6 +16,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 style="text-align:center; padding:20px;">List of student </h1>
     <div class="container">
         <table class="table table-striped">
             <tr>
@@ -24,6 +25,7 @@
                 <th>Student Email</th>
                 <th>Student Phone</th>
                 <th>Action</th>
+                
             </tr>
 
             <?php
@@ -39,20 +41,22 @@
                         <td><?php echo $data['student_phone']; ?></td>
                     
                        
-                        <td><a href="student_delete.php?id=<?php echo $data['student_id'] ?> "onclick="return confirm('Are you sure')"> Delete</a></td>
+                        <td>
+                        <!-- Delete student -->
 
+                        <a href="student_delete.php?id=<?php echo $data['student_id'] ?>" onclick= "return confirm('Are you sure')"><img src="bin.png" width="30" alt=""></a>
+
+                        <!-- Edit Student -->
+
+                        <a href="student_edit.php?id=<?php echo $data['student_id'] ?>" ><img src="pencil.png" width="25" alt=""></a>
+                        </td>
                         
                     </tr>
-
             <?php } ?>
-
-
-          
-
         </table>
-    </div>
+    </div> 
 
     
-    <a href="student_entry.php"><h2>Add Data</h2></a>
+    <a href="student_entry.php"><h2 style="padding:50px; color:">Add Data</h2></a>
 </body>
 </html>

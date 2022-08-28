@@ -9,3 +9,44 @@ BEGIN
 	ORDER BY student_id;    
 END$$
 DELIMITER ;
+
+###########
+
+DELIMITER $$
+
+CREATE PROCEDURE Get_merit_student()
+BEGIN
+	SELECT * FROM student_info WHERE marks >70;
+	SELECT COUNT(student_code) AS TOTAL_student FROM student_info; 
+END $$
+
+DELIMITER ;
+
+#######
+
+DELIMITER $$
+
+CREATE PROCEDURE Get_student(IN var1 INT)
+BEGIN
+	SELECT * FROM student_info LIMIT var1;
+	SELECT COUNT(student_code) AS TOTAL_student FROM student_info; 
+END $$
+
+DELIMITER ;
+
+
+##########
+
+START TRANSACTION;
+
+INSERT INTO student_info VALUES(
+	NULL,112,'BELAYET', 'Maths', 60, '017596869');
+
+
+	########## 
+
+	SELECT * FROM student_info; // avabe dekhte hbe na gele rollback naile commit;
+
+
+
+

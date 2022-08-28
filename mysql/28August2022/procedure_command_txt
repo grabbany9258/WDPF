@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE PROCEDURE GetStudents()
+BEGIN
+	SELECT 
+		*
+	FROM
+		students
+	ORDER BY student_id;    
+END$$
+DELIMITER ;

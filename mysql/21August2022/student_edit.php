@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php 
-        echo $id1 = $_GET['id'];
+        $id1 = $_GET['id'];
         $sql = "SELECT * FROM students WHERE student_id = '$id1'";
         $result = $db->query($sql);
         $data = $result->fetch_assoc();

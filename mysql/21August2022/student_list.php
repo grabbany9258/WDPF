@@ -1,4 +1,4 @@
-<?php include_once("dbconfig2.php"); ?>
+<?php $db = new mysqli("localhost", "root", "", "wdpf51"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

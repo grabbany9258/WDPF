@@ -1,3 +1,11 @@
+##### ki ki field nibo #####
+## Trigger ####
+
+student_table_log
+id, student_id, student_name, student_email, student_phone, action, action_time
+
+#############################################
+
 DELIMITER //
 CREATE TRIGGER after_student_entry
 AFTER INSERT ON students

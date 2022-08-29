@@ -1,0 +1,5 @@
+CREATE VIEW product_info_view AS
+SELECT p.id, p.name as product_name, m.name as manufacturer_name, p.price FROM 
+manufacturer m, product p WHERE m.id = p.manufacturer_id 
+AND 
+p.price>5000

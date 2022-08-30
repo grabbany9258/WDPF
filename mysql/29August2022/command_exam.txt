@@ -3,3 +3,11 @@ SELECT p.id, p.name as product_name, m.name as manufacturer_name, p.price FROM
 manufacturer m, product p WHERE m.id = p.manufacturer_id 
 AND 
 p.price>5000
+
+
+############
+
+
+CREATE VIEW product_info_view AS
+SELECT p_id, p_name, m_name,price FROM products, manufacturer WHERE id=manufacturer_id
+AND price>5000

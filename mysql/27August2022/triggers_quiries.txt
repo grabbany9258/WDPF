@@ -50,6 +50,20 @@ END //
 
 DELIMITER ;
 
+#######
+
+DELIMITER //
+CREATE TRIGGER after_product_delete
+AFTER DELETE ON product_info_view 
+FOR EACH ROW
+
+BEGIN
+INSERT INTO product_info_view_log VALUES(NULL, OLD.product_name, OLD.manufacturer_name, OLD.price,'DELETE', CURRENT_TIMESTAMP());
+
+END //
+
+DELIMITER ;
+
 
 
 

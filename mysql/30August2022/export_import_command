@@ -1,0 +1,16 @@
+## Data base export korte ###
+mysqldump -u root -p wdpf51>E:\wdpf51_dump.sql;
+
+## database import korte ##
+mysql -u root -p wdpf51_blank < E:\wdpf51_dump.sql  // semi colon dewa jabe na.
+
+## export file as text ##
+SELECT * INTO OUTFILE "E:/student_info.txt"
+FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+FROM wdpf51.student_info;
+
+## export file as xlxs ##
+
+SELECT * INTO OUTFILE "E:/student_info.xls"
+FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+FROM wdpf51.student_info;

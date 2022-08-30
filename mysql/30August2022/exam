@@ -1,0 +1,2 @@
+## DELETE Trigger Code ##
+DELETE FROM product WHERE manufacturer_id=OLD.id 

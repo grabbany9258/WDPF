@@ -1,8 +1,9 @@
 <?php $db = new mysqli('localhost', 'root', '', 'wdpf51_exam')?>
+<h1>Products List</h1>
 <table border=1>
     <tr>
         <th>ID</th>
-        <th>PRoduct Name</th>
+        <th>Pooduct Name</th>
         <th>Price</th>
         <th>Manufacturer</th>
     </tr>
@@ -24,3 +25,7 @@
     
     
 </table>
+ <br>
+ <br>
+
+<a href="manufacturers.php">Show Manufactureres</a>

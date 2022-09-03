@@ -8,7 +8,7 @@
        $sql = "DELETE FROM manufacturer WHERE id = '$id'";
        $db->query($sql);
        if($db->affected_rows>0){
-        echo "Deleted";
+        echo "Deleted"; 
        }
     }
 

@@ -1,0 +1,31 @@
+1.create database**
+create database idb_bisew;
+2. create table
+3.insert data
+4.coding___
+
+
+
+
+
+2. 2 no ques solve
+a) create table
+b) insert data
+c) create view
+CREATE VIEW  Product_info_view as
+SELECT rstudent_id,st_name,rmodule_name,rtotal_marks, st_mobile as Manufacturer_name from students, result Where student_id=rstudent_id;
+or,
+CREATE VIEW student_result_view as 
+SELECT rstudent_id,st_name,rmodule_name,rtotal_marks, st_mobile  from students, result Where student_id=rstudent_id ORDER BY st_name;
+
+after creating view try to create a table to display data in a table
+
+d) create procedure**
+CREATE PROCEDURE `Insert_student`() NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER INSERT INTO students VALUES(null,st_name,st_address,st_mobile);
+
+e) for deleting***
+php thn trigger
+
+f) insert **
+INSERT INTO `students` (`student_id`, `st_name`, `st_address`, `st_mobile`) VALUES (NULL, 'sulatana', 'Basa Boo', '234235346'), (NULL, 'Jannat', 'Jatrabare', '23432546');
+

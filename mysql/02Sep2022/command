@@ -1,0 +1,11 @@
+## Create view ##
+CREATE VIEW product_info_view AS
+SELECT p_id, p_name, manu_name, p-price FROM product , manufacturer WHERE p_id = manufacturer_id;
+
+### Trigger ###
+DELETE FROM product where manufacturer_id = OLD.manu_id
+
+
+
+
+

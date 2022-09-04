@@ -7,9 +7,4 @@ AND
 p.price>5000
 
 
-############
-
-## for another database ##
-CREATE VIEW product_info_view AS
-SELECT p_id, p_name, m_name,price FROM products, manufacturer WHERE id=manufacturer_id
-AND price>5000
+## Trigger ## 

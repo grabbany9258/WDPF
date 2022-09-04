@@ -1,0 +1,3 @@
+## Evedence 2 ##
+CREATE VIEW student_result_view AS
+SELECT student_id, st_name, rmodule_name, rtotal_marks FROM students, result WHERE r_id = student_id;	

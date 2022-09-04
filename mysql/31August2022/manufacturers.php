@@ -34,7 +34,7 @@
     <form action="" method="post">
         <select name="manu_id">
             <option value=""disabled selected>Select one</option>
-    <?php   
+    <?php    
        $sql = "SELECT * FROM manufacturer";
        $result = $db->query($sql);
       while($row = $result->fetch_assoc()){ ?>

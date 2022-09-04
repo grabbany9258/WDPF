@@ -23,13 +23,14 @@
        $sql = "CALL add_manufacturer('$m_name', '$m_address', '$m_contact')";
        $db->query($sql);
        if($db->affected_rows>0){
-        echo "Successfully Added";
+        echo "<h2 style='color: blue;'>Successfully Added</h2>";
        }
     }
 
 ?>
 
-//  For Manufacturer List $ DELETE
+  <!-- For Manufacturer List $ DELETE -->
+
 <h1> manufacturers List</h1>
     <form action="" method="post">
         <select name="manu_id">
@@ -47,7 +48,7 @@
     <input type="submit" name="submit" value="DELETE">
     </form>
 
-    // For Manufacturer Entry 
+     <!-- For Manufacturer Entry  -->
 
     <h1>Manufacturer Entry</h1>
         <form action="" method="post">
@@ -59,5 +60,5 @@
         </form>
 
     <br>
-    <a href="products.php">Show Products</a>
+    <a href="products_view_list.php">Show Products</a>
 </table>

@@ -1,0 +1,22 @@
+
+
+
+##### For view ####
+
+CREATE VIEW product_view AS
+SELECT id, name, price, manufacturer_id FROM products WHERE  p_price>5000;
+
+
+
+## Procedure ###
+
+INSERT INTO manufacturer VALUES(NULL, m_name, m_address, contact_no)
+
+CALL add_manufacturer
+
+
+
+## Trigger for Delete to show ## 
+DELETE FROM product WHERE manufacturer_id = id;
+
+

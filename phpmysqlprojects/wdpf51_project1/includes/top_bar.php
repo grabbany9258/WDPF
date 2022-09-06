@@ -26,6 +26,7 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
+      <li class ="nav-link"><a href="logout.php"> <i class ="fa fa-user"></i></a></li>
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">

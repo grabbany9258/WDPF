@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2022 at 07:05 PM
+-- Generation Time: Sep 07, 2022 at 07:12 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,6 +20,52 @@ SET time_zone = "+00:00";
 --
 -- Database: `wdpf51_project1`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `manufacturer`
+--
+
+CREATE TABLE `manufacturer` (
+  `m_id` int(11) NOT NULL,
+  `m_name` varchar(50) NOT NULL,
+  `m_address` varchar(150) NOT NULL,
+  `m_contact` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `manufacturer`
+--
+
+INSERT INTO `manufacturer` (`m_id`, `m_name`, `m_address`, `m_contact`) VALUES
+(1, 'Singer', 'Savar', '0178965485'),
+(2, 'Samsung', 'Dhupkhola', '0124578965'),
+(3, 'Hp', 'Adabor', '0178965478'),
+(4, 'Dell', 'Badda', '0178965485'),
+(5, 'Nokia', 'Shyamoli', '012365478');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `pname` varchar(40) NOT NULL,
+  `pdetails` varchar(200) NOT NULL,
+  `pprice` decimal(10,2) NOT NULL,
+  `pthumb` varchar(50) NOT NULL,
+  `manu_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `pname`, `pdetails`, `pprice`, `pthumb`, `manu_id`) VALUES
+(1, 'Fridge', 'Long Freedge', '35000.00', '', 1);
 
 -- --------------------------------------------------------
 
@@ -48,6 +94,18 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `usertype`, `created`) V
 --
 
 --
+-- Indexes for table `manufacturer`
+--
+ALTER TABLE `manufacturer`
+  ADD PRIMARY KEY (`m_id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -56,6 +114,18 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `manufacturer`
+--
+ALTER TABLE `manufacturer`
+  MODIFY `m_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

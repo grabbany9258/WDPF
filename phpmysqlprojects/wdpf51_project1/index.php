@@ -44,12 +44,13 @@ if(isset($_SESSION['email'])){
 
         $sql = "SELECT * FROM users WHERE email= '$email' AND password = '$pass'";
         $result = $db->query($sql);
+
         $row = $result->fetch_assoc();
 
        if($result->num_rows>0){
         // session_start();
         $_SESSION['email'] = $row['email'];
-        $_SESSION['name'] = $row['name'];
+        $_SESSION['name'] = $row['nam e'];
         $_SESSION['usertype'] = $row['usertype'];
 
         header("Location:dashboard.php");

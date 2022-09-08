@@ -79,13 +79,13 @@
         <div class="row">
           <!-- Content will be here -->
          
-          <div class="col-12">
+          <div class="col-lg-12">
          
           <!-- /.card -->
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">DataTable with default features</h3>
+              <h3 class="card-title">All Products</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -100,6 +100,13 @@
                 </tr>
                 </thead>
                 <tbody>
+                  <?php
+                  include_once("includes/db_config.php");
+                  $sql = "SELECT * FROM products";
+                  $result = $db->query($sql);
+                  ?>
+
+                  <?php while($row = $result->fetch_assoc()){ ?>
                 <tr>
                   <td><?php echo $row['id'] ?></td>
                   <td><?php echo $row['pname'] ?></td>
@@ -108,6 +115,8 @@
                   <td><?php echo $row['pthumb'] ?></td>
                   
                 </tr>
+
+             <?php } ?>
                 
                 
                 </tbody>

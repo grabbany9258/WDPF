@@ -118,9 +118,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a href="manufacturer.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
+                  <p>manufacturer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="manufacture_entry.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>manufacture_entry</p>
                 </a>
               </li>
             </ul>

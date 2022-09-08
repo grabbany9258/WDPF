@@ -86,7 +86,7 @@
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">All Products</h3>
-              <div class="text-right"> <a href="product_entry.php" class="btn btn-primary">New Product</a> </div>
+              <div class="text-right"> <a href="product_entry.php" class="btn btn-primary">New Manufacturer</a> </div>
             </div>
             
             <!-- /.card-header -->
@@ -95,31 +95,31 @@
                 <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Product Name</th>
-                  <th>Details</th>
-                  <th>Price</th>
-                  <th>Thumbnail</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact</th>
+                  
                   <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                   <?php
                   include_once("includes/db_config.php");
-                  $sql = "SELECT * FROM products";
+                  $sql = "SELECT * FROM manufacturer";
                   $result = $db->query($sql);
                   ?>
 
                   <?php while($row = $result->fetch_assoc()){ ?>
                 <tr>
-                  <td><?php echo $row['id'] ?></td>
-                  <td><?php echo $row['pname'] ?></td>
-                  <td><?php echo $row['pdetails'] ?></td>
-                  <td><?php echo $row['pprice'] ?></td>
-                  <td><?php echo $row['pthumb'] ?></td>
+                  <td><?php echo $row['m_id'] ?></td>
+                  <td><?php echo $row['m_name'] ?></td>
+                  <td><?php echo $row['m_address'] ?></td>
+                  <td><?php echo $row['m_contact'] ?></td>
+                  
                   <td>
-                    <a href="product_edit.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-edit"></i></a>|
+                    <a href="manufacturer_edit.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-edit"></i></a>|
 
-                    <a onclick="return confirm('Are you sure want to delete?')" href="product_delete.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-trash"></i></a> 
+                    <a onclick="return confirm('Are you sure want to delete?')" href="manufacturer_delete.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-trash"></i></a> 
                   </td>
                   
                 </tr>
@@ -131,10 +131,10 @@
                 <tfoot>
                 <tr>
                 <th>ID</th>
-                  <th>Product Name</th>
-                  <th>Details</th>
-                  <th>Price</th>  
-                  <th>Thumbnail</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact</th>  
+                  
                 </tr>
                 </tfoot>
               </table>

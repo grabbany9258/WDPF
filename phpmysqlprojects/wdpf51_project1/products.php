@@ -63,16 +63,10 @@
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
-          
-          <!-- /.col -->
-          
-          <!-- /.col -->
-
+         
           <!-- fix for small devices only -->
           <div class="clearfix hidden-md-up"></div>
 
-         
-         
         </div>
        
         <!-- Main row -->

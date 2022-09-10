@@ -42,11 +42,14 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Product Edit</h1>
+           
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Product Edit</li>
+              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Product Edit</li> -->
+
+              <li class="text-right"> <a href="products.php" class="btn btn-primary">View edited Product</a> </li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -81,10 +84,10 @@
               <?php 
               if(isset($_POST['update'])){
                 include_once("includes/db_config.php"); 
-                 $id =  $_GET['id'];
+                 $id1 =  $_GET['id'];
 
               extract($_POST);
-                $sql = "UPDATE products SET  id = '$id',pname='$name',pdetails='$details',pprice='$price',pthumb='$thumbnail',manu_id='$manufacturer' WHERE id = '$id'";
+                $sql = "UPDATE products SET  id = '$id1',pname='$name',pdetails='$details',pprice='$price',pthumb='$thumbnail',manu_id='$manufacturer' WHERE id = '$id1'";
 
                  
                 $db->query($sql);
@@ -98,9 +101,10 @@
 
 <!-- Select query -->
             <?php 
-                     $id = $_GET['id'];
+                    $id1 = $_GET['id'];
                     include_once("includes/db_config.php");
-                    $sql = "SELECT * FROM products WHERE id = '$id'";  // where ar porer ta table ar
+                    $sql = "SELECT * FROM products WHERE id = '$id1'";  
+                    //  where ar porer id ta table ar
                     $result = $db->query($sql);
                     $row = $result->fetch_assoc();
                     $mid =  $row['manu_id'];  //bujhi nai
@@ -111,7 +115,8 @@
 
 
 
-              <!-- form start -->
+    <!-- form start to view the data what we want to edit  -->
+
               <form role="form" action="" method="post">
                 <div class="card-body">
                   <div class="form-group">
@@ -127,7 +132,7 @@
                     <input type="text" name ="price" value="<?php echo $row['pprice']; ?>" class="form-control" id="exampleInputEmail1" placeholder="Enter product Price">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">Product Thumnail</label>
+                    <label for="exampleInputFile">Product Thumbnail</label>
                     <div class="input-group">
                       <div class="custom-file">
                         <input type="file" name="thumbnail" value="<?php echo $row['pthumb']; ?>" class="custom-file-input" id="exampleInputFile">
@@ -147,35 +152,33 @@
                        
                         ?>
                         <select name="manufacturer" value="<?php echo $row['manu_id']; ?>" class="form-control">
-                          <option disabled selected value="">Select One</option>
+                          <option value="" disabled selected>Select One</option>
                         <?php
                         while($row = $result->fetch_assoc()){ ?>
 
                       
-                        
+    <!--this part for getting manufacturer id in dropdown  -->
+
                           <option value="<?php echo $row['m_id']; ?>" <?php if($mid==$row['m_id']){echo "Selected";} ?> ><?php echo $row['m_name']; ?></option>
 
                           <?php  } ?>
                           
                         </select>
                       </div>
+                      </div>
 
-                  </div>
-
-
-
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                     
                 </div>
+
+                 
                 <!-- /.card-body -->
 
                 <div class="card-footer">
                   <button type="submit" name="update" class="btn btn-primary">UPDATE</button>
                 </div>
 
-                <input type="hidden" name="id" value="<?php echo $id; ?>"> //name ar id ta url ar ta.
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <!-- name ar id ta url ar ta. -->
               </form>
             </div>
             

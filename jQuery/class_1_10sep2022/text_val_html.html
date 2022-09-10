@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous">
+    </script>
+
+    <style>
+        .box1{ width:200px; height:200px; background-color:red; display:none;}  
+    </style>
+
+<script>
+    
+        $(document).ready(function(){
+                $("#btn1").click(function(){
+                 var x =   $("h1").text();
+                //  alert(x);
+
+                // 2 vabei kora jay
+                $("h2").text("Content from h1: " + x);
+                })
+                $("#btn2").click(function(){ 
+                    var y = $("#para1").html();
+                    $("#content1").html(y);
+
+                });
+        });
+
+</script>
+
+ 
+</head>
+<body>
+    <h1>My heading</h1>
+    <h2></h2>
+    
+    <button id = "btn1">Do it </button>
+
+    <button id = "btn2">Copy And Paste </button>
+
+
+    <p id ="para1"> <b>Lorem  ipsum dolor</b> sit amet consectetur adipisicing elit. Eum delectus ullam eaque minima necessitatibus <i>mpariatur</i>  et assumenda, vitae fugit quae, id harum eveniet quasi. Esse non officia veritatis ut quam? </p>
+
+    <div id = "content1" style="background-color: aqua;"></div>
+
+</body>
+</html>

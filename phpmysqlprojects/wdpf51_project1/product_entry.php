@@ -44,12 +44,15 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Product Entry</h1>
+            
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Product Entry</li>
+              <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Product Entry</li> -->
+              <li class="text-right"> <a href="products.php" class="btn btn-primary">View All Product</a> </li>
             </ol>
+            
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -127,7 +130,7 @@
                        
                         ?>
                         <select name="manufacturer" class="form-control">
-                          <option disabled selected value="">Select One</option>
+                          <option  value=""disabled selected>Select One</option>
                         <?php
                         while($row = $result->fetch_assoc()){ ?>
 
@@ -141,13 +144,7 @@
                       </div>
 
                   </div>
-
-
-
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                  </div>
+                  
                 </div>
                 <!-- /.card-body -->
 

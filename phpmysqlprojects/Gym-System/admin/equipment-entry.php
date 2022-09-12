@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +91,7 @@ header('location:../index.php');
           
         </div>
      
-        <!-- Visit codeastro.com for more projects -->
+        <!-- golam rabbany -->
         <div class="widget-content nopadding">
           <div class="form-horizontal">
           

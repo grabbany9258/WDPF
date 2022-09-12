@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <?php 
         
             if(isset($_POST['fullname'])){
@@ -16,7 +16,7 @@ header('location:../index.php');
             $address = $_POST["address"];
             $designation = $_POST["designation"];
             $id = $_POST["id"];
-            // <!-- Visit codeastro.com for more projects -->
+            // <!-- golam rabbany -->
             include 'dbcon.php';
             //code after connection is successfull
             //update query

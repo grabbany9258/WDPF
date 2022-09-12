@@ -1,6 +1,6 @@
 *** Log in Credentials! ***
 
-**Database Name: gymnsb**
+**Database Name: gym_mng_system**
 
 **Developed by Golam rabbany**
 

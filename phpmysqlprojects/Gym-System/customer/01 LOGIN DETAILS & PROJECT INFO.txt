@@ -1,6 +1,6 @@
 **Creadentials about Projects***
 
-**Database Name: gymnsb**
+**Database Name: gym_mng_system**
 
 **Developed by golam rabbany**
 

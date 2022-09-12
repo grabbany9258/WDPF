@@ -3,7 +3,7 @@
 $servername="localhost";
 $uname="root";
 $pass="";
-$db="gymnsb";
+$db="gym_mng_system";
 
 $conn=mysqli_connect($servername,$uname,$pass,$db);
 
@@ -16,4 +16,4 @@ $sql = "SELECT SUM( amount) FROM members";
         $row_amountsum = mysqli_fetch_assoc($amountsum);
         $totalRows_amountsum = mysqli_num_rows($amountsum);
         echo $row_amountsum['SUM( amount)'];
-?><!-- Visit codeastro.com for more projects -->
+?><!-- golam rabbany -->

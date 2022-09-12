@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

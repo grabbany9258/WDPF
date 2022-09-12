@@ -3,7 +3,7 @@
 $servername="localhost";
 $uname="root";
 $pass="";
-$db="gymnsb";
+$db="gym_mng_system";
 
 $conn=mysqli_connect($servername,$uname,$pass,$db);
 

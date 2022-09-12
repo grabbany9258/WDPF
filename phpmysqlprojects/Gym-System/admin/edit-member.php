@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +40,7 @@ header('location:../index.php');
   <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
 </div> -->
 <!--close-top-serch-->
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <!--sidebar-menu-->
 <?php $page='members-update'; include 'includes/sidebar.php'?>
 <!--sidebar-menu-->
@@ -85,7 +85,7 @@ header('location:../index.php');
                   <th>Action</th>
                 </tr>
               </thead>";
-              // <!-- Visit codeastro.com for more projects -->
+              // <!-- golam rabbany -->
             while($row=mysqli_fetch_array($result)){
             
             echo"<tbody> 
@@ -120,7 +120,7 @@ header('location:../index.php');
 <!--end-main-container-part-->
 
 <!--Footer-part-->
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <div class="row-fluid">
   <div id="footer" class="span12"> <?php echo date("Y");?> &copy; Developed By Golam rabbany</a> </div>
 </div>

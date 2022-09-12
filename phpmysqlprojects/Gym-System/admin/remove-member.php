@@ -5,7 +5,7 @@ if(!isset($_SESSION['user_id'])){
 header('location:../index.php');	
 }
 ?>
-<!-- Visit codeastro.com for more projects -->
+<!-- golam rabbany -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +41,7 @@ header('location:../index.php');
 </div> -->
 <!--close-top-serch-->
 
-<!--sidebar-menu--><!-- Visit codeastro.com for more projects -->
+<!--sidebar-menu--><!-- golam rabbany -->
 <?php $page='members-remove'; include 'includes/sidebar.php'?>
 <!--sidebar-menu-->
 

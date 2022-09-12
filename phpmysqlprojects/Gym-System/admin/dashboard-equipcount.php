@@ -3,7 +3,7 @@
 $servername="localhost";
 $uname="root";
 $pass="";
-$db="gymnsb";
+$db="gym_mng_system";
 
 $conn=mysqli_connect($servername,$uname,$pass,$db);
 
@@ -16,4 +16,4 @@ $sql = "SELECT * FROM equipment";
 
                 echo "$query->num_rows";
                 
-?><!-- Visit codeastro.com for more projects -->
+?>

@@ -1,0 +1,14 @@
+**Creadentials about Projects***
+
+**Database Name: gymnsb**
+
+**Developed by golam rabbany**
+
+**Recommended PHP Version 5.6, 7.4**
+
+
+**Admin Login Details**
+
+Username: admin
+Password: admin123
+

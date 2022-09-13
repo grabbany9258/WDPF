@@ -106,23 +106,26 @@ echo "<script>window.location.href='add-category.php'</script>";
                   </tr>
                 </thead>
                   <?php
-                  $sql="select * from tblcategory";
-                  $query= $dbh->prepare($sql);
-                  $query-> execute();
-                  $results = $query -> fetchAll(PDO::FETCH_OBJ);
-                  $cnt=1;
-                  if($query -> rowCount() > 0)
-                  {
-                  foreach($results as $result)
-                  {
+                  // $sql="select * from tblcategory";
+                  // $query= $dbh->prepare($sql);
+                  // $query-> execute();
+                  // $results = $query -> fetchAll(PDO::FETCH_OBJ);
+                  // $cnt=1;
+                  // if($query -> rowCount() > 0)
+                  // {
+                  // foreach($results as $result)
+                  // {
                   ?>
+
+                  
 
                 <tbody>
                   <tr>
                     <td><?php echo($cnt);?></td>
                     <td><?php echo htmlentities($result->category_name);?></td>
                     <td>
-                      <!-- <a href="add-category.php?cid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary" type="button">Edit</button></a>  -->
+                      <a href="add-category.php?cid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary" type="button">Edit</button></a> 
+
                       <a href="add-category.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger" type="button">Delete</button></a></td>
                   </tr>
                     <?php  $cnt=$cnt+1; } } ?>

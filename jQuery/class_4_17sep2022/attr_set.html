@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.min.js"> </script>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+            $("#img1").hover(function(){
+                $("img").attr('src','sun.jpg');
+            })
+
+
+            $("#img1").mouseout(function(){
+                $("img").attr('src','moon.jpg');
+            })
+
+
+
+        // $("#btn1").click(function(){
+        //     // set korle 2 ta attribute lage
+        //     $("img").attr('src', 'sun.jpg');
+        // })
+        });
+        </script>
+       
+        <div>
+            <img id="img1" src="moon.jpg" alt="" width="200px">
+            <!-- <img src="moon.jpg" alt="" width="200px"> -->
+            <br>
+            <button id="btn1">Click Here</button>
+        
+       
+        </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery.min.js"> </script>
+</head>
+<body>
+    <script>
+        $(document).ready(function() {
+            $("em").addClass("selected");
+            $("#myid").addClass("highlight myclass"); // addclass space diye dite hoy...
+            });
+            </script>
+            <style>
+            .selected { color:red; }
+            .highlight { background:yellow; }
+            .myclass{ font-size: 30px; border-bottom: 2px solid blue; }
+            #myid{font-family: Arial, Helvetica, sans-serif}
+            </style>
+            </head>
+            <body>
+            <em title="Bold and Brave">This is first paragraph.</em>
+            <p id="myid">This is second paragraph.</p>
+    </script>
+   
+</body>
+</html>

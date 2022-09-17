@@ -21,18 +21,3 @@ Employer Credential
 Username: john@test.com
 Password: Test@123
 or Register a new user
-
-############################
-
-1) search box k responsive korte hbe
-2) Delete button na diye icons plus edit part o thakbe
-3) Show 10 entris limit not working
-4) Next - previous page is not working
-
-
-More table could be added:
-1) Members List
-2)Instruments list
-3)Trainer List
-4)Shift
-6)

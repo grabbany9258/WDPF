@@ -117,9 +117,9 @@
                   <td><?php echo $row['m_contact'] ?></td>
                   
                   <td>
-                    <a href="manufacturer_edit.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-edit"></i></a>|
+                    <a href="manufacturer_edit.php?id=<?php echo $row['m_id'] ?>"><i class ="fa fa-edit"></i></a>|
 
-                    <a onclick="return confirm('Are you sure want to delete?')" href="manufacturer_delete.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-trash"></i></a> 
+                    <a onclick="return confirm('Are you sure want to delete?')" href="manufacturer_delete.php?id=<?php echo $row['m_id'] ?>"><i class ="fa fa-trash"></i></a> 
                   </td>
                   
                 </tr>

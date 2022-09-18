@@ -1,30 +1,30 @@
-<?php 
-  session_start();
-  if(!isset($_SESSION['email'])){
-    header("Location:logout.php");
-  }
-?>
+<?php session_start();
+error_reporting(0);
+include  'include/config.php'; 
+if (strlen($_SESSION['adminid']==0)) {
+  header('location:logout.php');
+  } else{
 
-<?php 
-  if(isset($_POST['save'])){
-      include_once("include/config.php");
-    extract($_POST);
-    $sql = "INSERT INTO tblcategory VALUES('$category')";
-    $db->query($sql);
-    if($db->affected_rows>0){
-      echo "<div class='alert alert-success'>category Added successfully</div>";
-    }
-  }
-?>
+if(isset($_POST['submit'])){
+$category = $_POST['category'];
+$sql="INSERT INTO tblcategory (category_name) Values(:category)";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':category',$category,PDO::PARAM_STR);
+$query -> execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId>0)
+{
+$msg= "Category Add Successfully";
+ }
+else {
 
-
-
-
-
+$errormsg= "Data not insert successfully";
+ }
+}
 
 //Delete Record Data
 
-<!-- if(isset($_REQUEST['del']))
+if(isset($_REQUEST['del']))
 {
 $uid=intval($_GET['del']);
 $sql = "delete from tblcategory WHERE  id=:id";
@@ -33,7 +33,7 @@ $query-> bindParam(':id',$uid, PDO::PARAM_STR);
 $query -> execute();
 echo "<script>alert('Record Delete successfully');</script>";
 echo "<script>window.location.href='add-category.php'</script>";
-} -->
+}
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +123,7 @@ echo "<script>window.location.href='add-category.php'</script>";
                     <td><?php echo htmlentities($result->category_name);?></td>
                     <td>
                       <!-- <a href="add-category.php?cid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary" type="button">Edit</button></a>  -->
-                      <!-- <a href="add-category.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger" type="button">Delete</button></a></td> -->
+                      <a href="add-category.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger" type="button">Delete</button></a></td>
                   </tr>
                     <?php  $cnt=$cnt+1; } } ?>
               
@@ -146,4 +146,4 @@ echo "<script>window.location.href='add-category.php'</script>";
   
   </body>
 </html>
-<?php //} ?>
+<?php } ?>

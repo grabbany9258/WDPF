@@ -1,0 +1,14 @@
+folder banate hbe = file upload korte hbe
+
+php datbases theke database banate hbe 
+
+create user -> give privilage
+
+then uploaded database theke edit kore nite hbe
+
+localhost theke table users1 export kore then hosting a import korte hbe live phpmyadmin a ..
+
+users 1 table edit korte hbe
+
+https://szhabib.idbdev.com/registration_confirmation/store-registration-send-email.php
+

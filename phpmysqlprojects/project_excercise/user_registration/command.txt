@@ -12,3 +12,6 @@ users 1 table edit korte hbe
 
 https://szhabib.idbdev.com/registration_confirmation/store-registration-send-email.php
 
+https://dawah.info.bd/g_rabbany/store-registration-send-email.php
+
+

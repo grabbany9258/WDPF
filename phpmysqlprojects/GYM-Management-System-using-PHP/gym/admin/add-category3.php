@@ -103,6 +103,7 @@ echo "<script>window.location.href='add-category.php'</script>";
                   $result = $db->query($sql);
                   ?>
 
+<<<<<<< HEAD
                   <?php while($row = $result->fetch_assoc()){ ?>
 
               <tbody>    
@@ -123,6 +124,17 @@ echo "<script>window.location.href='add-category.php'</script>";
              <?php } ?>
                 
           
+=======
+                <tbody>
+                  <tr>
+                    <td><?php echo($cnt);?></td>
+                    <td><?php echo htmlentities($result->category_name);?></td>
+                    <td>
+                      <!-- <a href="add-category.php?cid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary" type="button">Edit</button></a>  -->
+                      <!-- <a href="add-category.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger" type="button">Delete</button></a></td> -->
+                  </tr>
+                    <?php  $cnt=$cnt+1; } } ?>
+>>>>>>> 58945a629c6b0e7170b24b6f9a17da9a484ab7ea
               
                 </tbody>
               </table>

@@ -14,3 +14,13 @@ catch (PDOException $e)
 exit("Error: " . $e->getMessage());
 }
 ?>
+
+<?php 
+// define("HOST", "localhost");
+// define("USER", "root");
+// define("PASS", "");
+// define("DB", "gymdb");
+
+// $db = new mysqli(HOST, USER, PASS, DB);
+
+?>

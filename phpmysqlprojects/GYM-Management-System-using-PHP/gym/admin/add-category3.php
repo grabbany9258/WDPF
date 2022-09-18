@@ -1,30 +1,30 @@
-<?php session_start();
-error_reporting(0);
-include  'include/config.php'; 
-if (strlen($_SESSION['adminid']==0)) {
-  header('location:logout.php');
-  } else{
+<?php 
+  session_start();
+  if(!isset($_SESSION['email'])){
+    header("Location:logout.php");
+  }
+?>
 
-if(isset($_POST['submit'])){
-$category = $_POST['category'];
-$sql="INSERT INTO tblcategory (category_name) Values(:category)";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':category',$category,PDO::PARAM_STR);
-$query -> execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId>0)
-{
-$msg= "Category Add Successfully";
- }
-else {
+<?php 
+  if(isset($_POST['save'])){
+      include_once("include/config.php");
+    extract($_POST);
+    $sql = "INSERT INTO tblcategory VALUES('$category')";
+    $db->query($sql);
+    if($db->affected_rows>0){
+      echo "<div class='alert alert-success'>category Added successfully</div>";
+    }
+  }
+?>
 
-$errormsg= "Data not insert successfully";
- }
-}
+
+
+
+
 
 //Delete Record Data
 
-if(isset($_REQUEST['del']))
+<!-- if(isset($_REQUEST['del']))
 {
 $uid=intval($_GET['del']);
 $sql = "delete from tblcategory WHERE  id=:id";
@@ -33,7 +33,7 @@ $query-> bindParam(':id',$uid, PDO::PARAM_STR);
 $query -> execute();
 echo "<script>alert('Record Delete successfully');</script>";
 echo "<script>window.location.href='add-category.php'</script>";
-}
+} -->
 ?>
 
 <!DOCTYPE html>
@@ -62,18 +62,9 @@ echo "<script>window.location.href='add-category.php'</script>";
         
         <div class="col-md-6">
           <div class="tile">
-          <!---Success Message--->  
-          <?php if($msg){ ?>
-          <div class="alert alert-success" role="alert">
-          <strong>Well done!</strong> <?php echo htmlentities($msg);?>
-          </div>
-          <?php } ?>
+          
 
-          <!---Error Message--->
-          <?php if($errormsg){ ?>
-          <div class="alert alert-danger" role="alert">
-          <strong>Oh snap!</strong> <?php echo htmlentities($errormsg);?></div>
-          <?php } ?>
+         
 
            
             <div class="tile-body">
@@ -105,27 +96,33 @@ echo "<script>window.location.href='add-category.php'</script>";
                     
                   </tr>
                 </thead>
-                  <?php
-                  $sql="select * from tblcategory";
-                  $query= $dbh->prepare($sql);
-                  $query-> execute();
-                  $results = $query -> fetchAll(PDO::FETCH_OBJ);
-                  $cnt=1;
-                  if($query -> rowCount() > 0)
-                  {
-                  foreach($results as $result)
-                  {
+
+                <?php
+                  include_once("include/config.php");
+                  $sql = "SELECT * FROM  tblcategory";
+                  $result = $db->query($sql);
                   ?>
 
-                <tbody>
-                  <tr>
-                    <td><?php echo($cnt);?></td>
-                    <td><?php echo htmlentities($result->category_name);?></td>
-                    <td>
-                      <!-- <a href="add-category.php?cid=<?php echo htmlentities($result->id);?>"><button class="btn btn-primary" type="button">Edit</button></a>  -->
-                      <a href="add-category.php?del=<?php echo htmlentities($result->id);?>"><button class="btn btn-danger" type="button">Delete</button></a></td>
-                  </tr>
-                    <?php  $cnt=$cnt+1; } } ?>
+                  <?php while($row = $result->fetch_assoc()){ ?>
+
+              <tbody>    
+                <tr>
+                  <td><?php echo $row['id'] ?></td>
+                  <td><?php echo $row['category_name'] ?></td>
+                  <td><?php echo $row['status'] ?></td>
+
+                  
+                  <td>
+                    <a href="category_edit.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-edit"></i></a>|
+
+                    <a onclick="return confirm('Are you sure want to delete?')" href="category_delete.php?id=<?php echo $row['id'] ?>"><i class ="fa fa-trash"></i></a> 
+                  </td>
+                  
+                </tr>
+
+             <?php } ?>
+                
+          
               
                 </tbody>
               </table>
@@ -146,4 +143,4 @@ echo "<script>window.location.href='add-category.php'</script>";
   
   </body>
 </html>
-<?php } ?>
+<?php //} ?>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+
+     <script>
+        $(document).ready(function () {
+            $("#choice").change(function(){
+                var ch = $(this).val();
+                    // alert(ch);
+                    $.get('list.php',{mydata:ch}, function(data){
+                        // alert(data);
+                        $("#show").html(data);
+                        
+
+                    })
+
+
+            })
+        });
+     </script>
+</head>
+<body>
+    <form action="">
+        <select id="choice">
+            <option value="" disabled selected>Select One</option>
+            <option value="Good">Good</option>
+            <option value="Bad">Bad</option>           
+        </select>
+    </form>
+
+    <div id="show"></div>
+    
+</body>
+</html>

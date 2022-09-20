@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>the title</title>
+<script type="text/javascript"
+src="../jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+    $(".btn1").click(function() {
+        $(".box1").after("<div class='box'>Content before box1</div>"); 
+        
+        $(".box").click(function() {
+            $(this).remove();
+        })   
+    })
+
+   
+});
+</script>
+<style>
+    .box1{ margin:10px;padding:12px;
+    border:2px solid #666;
+    width:100px; color:rgb(99, 235, 8); 
+    }
+    .box{ margin:10px;padding:12px;
+    border:1px solid rgb(228, 9, 9);
+    width:100px; color:rgb(10, 22, 1); 
+    }
+    </style>
+    </head>
+    <body>
+        <button class="btn1">Add New Div</button>
+        <div class="box1"><b>This</b> is header inside box1</div>
+    
+     </body>
+    </html>

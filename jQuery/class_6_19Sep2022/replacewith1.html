@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>the title</title>
+<script type="text/javascript"
+src="../jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+    $(".box1").click(function() {
+        var b2 = $(".box2").text();
+        //$(this).replaceWith(b2);
+        $(this).replaceWith("<h1>Some content</h1");
+    })
+});
+</script>
+<style>
+    .box1{ margin:10px;padding:12px;
+    border:2px solid #666;
+    width:100px; color:rgb(99, 235, 8); 
+    }
+    .box2{ margin:10px;padding:12px;
+    border:2px solid rgb(230, 32, 32);
+    width:100px; color:rgb(23, 8, 235); 
+    }
+    </style>
+    </head>
+    <body>
+    <p>Click on the square below:</p>
+    <div class="box1">This is box1</div>
+    <div class="box2">This is box2</div>
+    </body>
+    </html>

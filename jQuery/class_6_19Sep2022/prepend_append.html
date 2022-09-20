@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>the title</title>
+<script type="text/javascript"
+src="../jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+    $(".btn1").click(function() {
+        $(".country").prepend("<li>Item before </li>");     
+    })
+    $(".btn2").click(function() {
+        $(".country").append("<li>Item after </li>");     
+    })  
+});
+</script>
+    </head>
+    <body>
+    <ul class="country">
+        <li style="color: red;">Add item</li>
+    </ul>
+    <button class="btn1">Before</button>
+    <button class="btn2">After</button>
+     </body>
+    </html>

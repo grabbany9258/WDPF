@@ -1,6 +1,6 @@
 <?php
-// echo "Hello";
- echo $_GET['mydata'];
+ //echo "Hello";
+//echo $_GET['mydata'];
 
 if($_GET['mydata']=='Good'){
     $good = array("aminul", "sakib", "fayzullah","rahi");

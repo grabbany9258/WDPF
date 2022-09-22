@@ -2,12 +2,25 @@
 
 <head>
     <title>Select/Unselect Checkboxes</title>
+    <style type="text/css">
+        ul {
+            background-color: #DCDCDC;
+            list-style: none;
+            margin: 0pt;
+            padding: 0pt;
+            width: 350px;
+        }
+
+        li {
+            padding: 10px;
+        }
+    </style>
+
     <script src="../jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#handle').click(function () {
-                if ($(this).attr('checked') == true)
+                if (this.checked)
                     $('.toggle').attr('checked', 'true');
                 else
                     $('.toggle').removeAttr('checked');
@@ -31,30 +44,17 @@
             });
         });
     </script>
-    <style type="text/css">
-        ul {
-            background-color: #DCDCDC;
-            list-style: none;
-            margin: 0pt;
-            padding: 0pt;
-            width: 350px;
-        }
-
-        li {
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
     <ul>
         <li>
-            <input type="checkbox" id="handle" >
+            <input type="checkbox" id="handle">
             <label for="handle">
                 <strong>Toggle All</strong></label>
         </li>
         <li>
-            <input type="checkbox" class="toggle"  />
+            <input type="checkbox" class="toggle" />
             <label>A Study in Scarlet</label>
         </li>
         <li>
@@ -62,12 +62,12 @@
             <label>The Sign of the Four</label>
         </li>
         <li>
-            <input type="checkbox" class="toggle"  />
+            <input type="checkbox" class="toggle" />
             <label>The Adventures of Sherlock Holmes</label>
         </li>
         <li>
             <input type="checkbox" class="toggle" />
-
+            48 | P a g e
             <label>The Valley of Fear</label>
         </li>
         <li>

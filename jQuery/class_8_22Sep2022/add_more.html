@@ -8,9 +8,10 @@
         $(document).ready(function () {
             $('#add').click(function () {
                 var str = '<li>';
-                str += '<label>Name</label><input type="text" value=""/> ';
-                str += '<input type="button" value="remove" class="remove" /> ';
-                str += '</li>';
+                str += '<label>Name</label><input type="text" value="" placeholder="Enter your Name">  '; 
+                str += '<input type="button" value="remove" class="remove">'  ; 
+               
+                str += '</li>' + '<br>'; 
                 $('#sites').append(str);
 
                 $('.remove').on('click', function () {
@@ -23,7 +24,7 @@
 
     <style type="text/css">
         fieldset {
-            width: 450px;
+            width:400px;
         }
 
         ul {
@@ -39,13 +40,13 @@
 </head>
 
 <body>
-    <form action="process.php" method="post">
+    <form action="" method="post">
         <fieldset>
             <legend>Websites you visit daily</legend>
             <ul id="sites">
                 <li>
-                    <label>Name</label><input type="text" value="" />
-                </li>
+                    <label>Name</label><input type="text" value="" placeholder="Enter your Name" /> 
+                </li> <br>
             </ul>
             <input type="button" id="add" value="Add More" />
         </fieldset>

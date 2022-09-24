@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .green{background-color: green; color: white;}
+        .red{background-color: red; color: white;}
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#login").click(function(){
+          var em =  $("#email").val();
+          var pss =  $("#password").val();
+           
+
+// Get diye kora 
+
+                $.get(
+                    'check.php', {email:em, pass:pss}, function(data){
+                       $("#show").html(data);
+
+                    });
+
+// Post diye kora 
+                // $.post(
+                //     'check.php', {email:em, pass:pss}, function(data){
+                //        $("#show").html(data);
+
+                //     });
+
+// ajax diye korce
+
+            //     $.ajax({ 
+            //         url:'check.php',
+            //         method: 'GET',
+            //         data:{email:em, pass:pss},
+            //     success: function(result){
+            //         $("#show").html(result);
+            //     }
+            // })
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="show"></div>
+    <table border="1">
+        <caption>Login Form</caption>
+        <form action="">
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="button" id="login" value="Login"></td>
+            </tr>
+        </form>
+
+
+
+    </table>
+</body>
+</html>

@@ -26,7 +26,7 @@
     </script>
 </head>
 <body>
-
+<h2>Batchwise Students</h2>
         <form action="">
             <select id="batchid">
                 <option value="" disabled selected>Select One</option>

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Search</title>
+    <style type="text/css">
+        body {
+            font-family: "Trebuchet MS", verdana;
+            width: 450px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        #show {
+            color: #008000;
+            font-weight: bold;
+        }
+    </style>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#check').click(validate);
+
+            function validate() {
+                var dataValid = true;
+                $("#show").html('');
+
+
+                $('.mail').each(function () {
+                    var cur = $(this);
+                    cur.next('span').remove();
+                    var emailPattern = /^([a-z0-9_\.-]+)@([a-z0-9\.-]+)\.([a-z\.]{2,6})$/;
+                    if (!emailPattern.test(cur.val())) {
+                        cur.after('<span class="error"> Invalid Email Id</span>');
+                        dataValid = false;
+                    }
+                });
+
+                
+                // if(!dataValid) return;
+                $('.site').each(function () {
+                    var cur = $(this);
+                    cur.next('span').remove();
+                    var urlPattern = /^(http(s?))\:\/\/www.([0-9a-zA-Z\-]+\.)+[a-zA-Z]{2,6}(\:[0-9]+)?(\/\S*)?$/;
+                    if (!urlPattern.test(cur.val())) {
+                        cur.after('<span class="error"> Invalid URL</span>');
+                        dataValid = false;
+                    }
+                });
+                if (dataValid) {
+                    $('#show').html('Validation OK');
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend><strong>Contact Details</strong>- both fields are
+                mandatory</legend>
+            <table>
+                <tbody>
+                    <tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="text" class="required mail" /></td>
+                    </tr>
+                    <tr>
+                        <td>Website:<br/>(start with http://) </td>
+                        <td><input type="text" class="required site" /></td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br/>
+        <div id="show"></div>
+        <br/>
+        <input type="button" value="Check" id="check" />
+    </form>
+</body>

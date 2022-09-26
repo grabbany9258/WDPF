@@ -1,7 +1,7 @@
 <?php
     $db = new mysqli("localhost", "root", "", "wdpf51_batch_students");
 
-    // echo $_GET['bid'];
+    // echo $_GET ['bid'];
 
 
     $id =  $_GET['bid'];
@@ -13,8 +13,5 @@
     while($row= $result->fetch_assoc()){
         echo $row['student_name'] . "<br>";
     }
-
-
-
 
 ?>

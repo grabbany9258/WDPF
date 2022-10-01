@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        addClass{
+            border-color: 1px solid black ;
+            
+
+
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#masterList").find("li").width(500).addClass("selected");
+        });
+    </script>
+</head>
+<body>
+    <div class="selected">
+        <ul> kamal
+            <li>rabbany</li>
+            <li>aminul</li>
+            <li>jamal</li>
+            <li>sabuj</li>
+        </ul>
+    </div>
+
+    <div id="masterlist">
+        <ul> 
+            <li>rabbany</li>
+            <li>rakib</li>
+            <li>faysal</li>
+            <li>haydar</li>
+        </ul>
+    </div>
+</body>
+</html>

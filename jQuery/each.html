@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            // $("button").click(function(){
+            //     alert();
+            // })
+            
+            //var fruits = array("apple","banana","jackfruite");
+            var fruits = ['apple','banana','jackfruite'];
+            var all = '';
+           
+            $.each(fruits, function(index,value){
+                
+                all += '<li>'+value+'</li>';
+            });
+            $("#output").html(all);            
+        });
+    </script>
+</head>
+<body>
+       <div id="output"></div>
+       <!-- <button>Alert the value of each list ite</button> -->
+    
+</body>
+</html>

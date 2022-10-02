@@ -3,7 +3,7 @@
 
     // echo $_GET ['bid'];
 
-
+ 
     $id =  $_GET['bid'];
 
     $sql = "SELECT * FROM students WHERE st_batch_id = '$id'";

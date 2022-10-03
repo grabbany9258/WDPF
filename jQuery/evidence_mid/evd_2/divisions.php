@@ -15,6 +15,7 @@
 
            $.get('district.php', {divid:id}, function(data){
             $("#district").html(data);
+            // alert(data);
 
            })
            }) 
@@ -43,7 +44,7 @@
             ?>
         </select> <br>
         <select  id="district">
-                <option value="" selected disabled>Select One</option>
+                <option value="">Select One</option>
          </select>
     </form>
    

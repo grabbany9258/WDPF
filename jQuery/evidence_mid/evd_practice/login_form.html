@@ -6,35 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .green{background-color: green; color: white; width: 250px; padding: 5px;}
-        .red{background-color: red; color: white; width: 350px; padding: 5px;}
-        body {font-family: "Trebuchet MS", verdana; width: 450px; }
-        #login{margin-bottom: 15px; width: 60px; height: 30px; font-size: large; font-weight: bolder;}
-       
-       
+        .green{background-color: green; color: white; width: 270px;}
+        .red{background-color: red; color: white; width: 370px;}
+        fieldset{width: 400px; border: 2px solid black;}
     </style>
     <script src="../../jquery.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#login").click(function(){
                 var email = $("#email").val();
-                var pass = $("#pass").val();
-                // alert(pass);
-                $.post("check.php",{em:email,password:pass},function(data){
-                    // alert(data);
-                    $("#show").html(data);
+               var pass = $("#pass").val();
+            //    alert(email);
+            $.post("check.php",{em:email, password:pass},function(data){
+                // alert(data);
+                $("#show").html(data);
 
-                })
             })
-        });
-    </script> 
 
+            
+            });
+        });
+    </script>
 </head>
-<body>   
+<body>
     <fieldset>
-        <legend><h2>Login Form</h2></legend>
+        <legend><h1>Login Form</h1></legend>
         <table>
-            <caption>Login Form</caption>
             <tr>
                 <td>Email:</td>
                 <td><input type="text" id="email"></td>
@@ -42,13 +39,10 @@
             <tr>
                 <td>Password:</td>
                 <td><input type="password" id="pass"></td>
-            </tr>           
-        </table>       
+            </tr>
+        </table>
     </fieldset> <br>
-
     <input type="button" id="login" value="Login">
-    <br>
-
-    <div id="show"></div>
 </body>
+<div id="show"></div>
 </html>
